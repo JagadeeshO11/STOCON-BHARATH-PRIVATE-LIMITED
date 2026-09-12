@@ -1,27 +1,39 @@
 # STOCON BHARATH PRIVATE LIMITED
 
-Frontend website for STOCON BHARATH PRIVATE LIMITED, an India-based export-focused company dealing in food products, fruits, vegetables, and spices.
+Frontend website for **STOCON BHARATH PRIVATE LIMITED**, an India-based export-focused business dealing in food products, fruits, vegetables and spices.
 
-## Frontend direction
+## Tech stack
 
-- React + TypeScript + Vite
-- Tailwind CSS
-- React Router
-- Framer Motion
+- React
+- TypeScript
+- Vite
 - Lucide React
-- Mobile-first responsive UI
-- Natural, premium, export-focused visual system
+- Responsive CSS
 
-## Business basis
+## Run locally
 
-Established: August 2025  
-Location: Tirupati, Andhra Pradesh, India
+```bash
+npm install
+npm run dev
+```
 
-Primary focus: Export of food products, fruits, vegetables, and spices.
-Future expansion mentioned by the client: frozen seafood exports.
+## Production build
 
-## Contact
+```bash
+npm run build
+```
 
-Phone: 9566055540 / 9908149764  
-WhatsApp: 9566055540  
-Email: stoconbharath@gmail.com
+## Current website scope
+
+- Premium responsive homepage
+- Company introduction
+- Product categories
+- Export process
+- Future expansion direction
+- Contact, phone, email and WhatsApp actions
+
+## Important
+
+The current product imagery uses external editorial placeholder photography. Before production launch, these should be replaced with licensed STOCON product, farm, packaging and company assets.
+
+Business content is based on the STOCON project brief supplied for this project.
