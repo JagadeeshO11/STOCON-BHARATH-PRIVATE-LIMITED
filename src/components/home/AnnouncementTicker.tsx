@@ -1,5 +1,24 @@
 import './AnnouncementTicker.css'
 
+const categories = [
+  'FOOD PRODUCTS',
+  'FRESH FRUITS',
+  'VEGETABLES',
+  'INDIAN SPICES',
+  'GLOBAL EXPORT',
+]
+
 export function AnnouncementTicker() {
-  return <div className="ticker" aria-label="Product categories">FOOD PRODUCTS <i>✦</i> FRESH FRUITS <i>✦</i> VEGETABLES <i>✦</i> INDIAN SPICES <i>✦</i> GLOBAL EXPORT</div>
+  return (
+    <div className="ticker" aria-label="Product categories">
+      <div className="ticker__track">
+        {categories.map((category) => (
+          <span key={category}>{category} <i>✦</i></span>
+        ))}
+        {categories.map((category) => (
+          <span key={'repeat-' + category} aria-hidden="true">{category} <i>✦</i></span>
+        ))}
+      </div>
+    </div>
+  )
 }
