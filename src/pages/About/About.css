@@ -1,0 +1,9 @@
+.about-story { padding: var(--section-space) var(--container-padding); display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+.about-story h2 { font-size: clamp(38px, 5vw, 66px); }
+.about-story__copy p { max-width: 560px; color: #66736a; line-height: 1.8; }
+.about-story__cards { display: grid; gap: 1px; background: #d9d1c2; }
+.about-story__cards article { background: var(--cream); padding: 28px; }
+.about-story__cards svg { color: var(--leaf); }
+.about-story__cards h3 { margin: 18px 0 7px; color: var(--green); }
+.about-story__cards p { margin: 0; color: #66736a; font-size: 13px; line-height: 1.7; }
+@media (max-width: 850px) { .about-story { grid-template-columns: 1fr; gap: 35px; } }
