@@ -1,0 +1,46 @@
+.future-vision {
+  background: var(--sand);
+}
+
+.future-vision__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.future-vision h2 {
+  font-size: clamp(38px, 5vw, 66px);
+  max-width: 700px;
+}
+
+.future-vision__card {
+  padding: 38px;
+  background: var(--green);
+  color: #fff;
+}
+
+.future-vision__icons {
+  display: flex;
+  gap: 14px;
+  color: #d8bd82;
+}
+
+.future-vision__card h3 {
+  margin: 32px 0 12px;
+  font-size: 22px;
+}
+
+.future-vision__card p {
+  margin: 0;
+  color: #c7d2ca;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .future-vision__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
