@@ -29,6 +29,7 @@
     "postcss": "latest",
     "tailwindcss": "latest",
     "typescript": "latest",
-    "vite": "latest"
+    "vite": "latest",
+    "@vitejs/plugin-react": "latest"
   }
 }
