@@ -14,7 +14,8 @@
     "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-router-dom": "latest"
+    "react-router-dom": "latest",
+    "react-icons": "latest"
   },
   "devDependencies": {
     "@types/react": "latest",
