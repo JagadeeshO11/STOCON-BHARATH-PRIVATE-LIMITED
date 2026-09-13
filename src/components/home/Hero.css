@@ -1,1 +1,142 @@
-.hero{min-height:calc(100vh - 82px);padding:clamp(54px,8vw,110px) clamp(22px,7vw,112px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px;overflow:hidden}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--leaf);font-family:'DM Mono';font-size:10px;letter-spacing:.15em}.eyebrow span{width:30px;height:1px;background:var(--gold)}.hero h1{font-size:clamp(45px,6vw,92px);line-height:.98;letter-spacing:-.055em;margin:22px 0;font-weight:800;color:var(--green)}h1 em{font-family:'Playfair Display',serif;font-weight:500}.hero-copy>p{max-width:560px;color:#59655d;font-size:16px;line-height:1.8}.hero-actions{display:flex;gap:24px;align-items:center;margin-top:30px}.primary-btn{display:inline-flex;align-items:center;gap:9px;border:0;background:var(--green);color:#fff;padding:16px 22px;font-size:12px;font-weight:800}.text-btn{border:0;background:none;color:var(--green);font-weight:800;display:flex;align-items:center;gap:6px;padding:8px 0}.hero-proof{display:flex;gap:34px;margin-top:55px}.hero-proof>div{display:flex;gap:10px;align-items:center;color:var(--leaf)}.hero-proof span{display:grid}.hero-proof strong{font-size:12px;color:var(--green)}.hero-proof small{font-size:10px;color:#738077}.hero-visual{min-height:570px;position:relative}.hero-image{position:absolute;inset:25px 20px 0 80px;background:linear-gradient(180deg,rgba(7,37,25,.05),rgba(7,37,25,.35)),url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=90') center/cover;border-radius:240px 240px 16px 16px;box-shadow:30px 30px 0 var(--sand)}.hero-orbit{position:absolute;border:1px solid rgba(93,127,61,.35);border-radius:50%;z-index:-1}.orbit-a{width:430px;height:430px;right:-90px;top:10px}.orbit-b{width:610px;height:610px;right:-170px;top:-80px}.floating-card{position:absolute;background:#fff;padding:14px 16px;display:flex;gap:9px;align-items:center;box-shadow:0 15px 40px rgba(8,37,25,.13);color:var(--leaf)}.floating-card span{display:grid;font-size:11px;font-weight:800}.floating-card small{font-size:9px;color:#7c877f;font-weight:500}.card-top{top:100px;left:0}.card-bottom{bottom:40px;right:0}@media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto;padding:62px 22px 40px;gap:30px}.hero h1{font-size:52px}.hero-visual{min-height:420px}.hero-image{inset:20px 15px 0 45px}.hero-proof{margin-top:35px}.floating-card{padding:11px}}@media(max-width:520px){.hero h1{font-size:46px}.hero-copy>p{font-size:14px}.hero-actions{flex-direction:column;align-items:flex-start;gap:12px}.hero-proof{gap:15px}.hero-visual{min-height:360px}.hero-image{inset:18px 5px 0 25px;border-radius:180px 180px 12px 12px}.orbit-a{width:280px;height:280px}.orbit-b{width:390px;height:390px}}
+.hero {
+  min-height: calc(100vh - 82px);
+  padding: clamp(54px, 8vw, 110px) var(--container-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--leaf);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.eyebrow span { width: 30px; height: 1px; background: var(--gold); }
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 92px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  margin: 22px 0;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.hero h1 em {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.hero-copy > p {
+  max-width: 560px;
+  color: #59655d;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  background: var(--green);
+  color: #fff;
+  padding: 16px 22px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.text-btn {
+  border: 0;
+  background: none;
+  color: var(--green);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+}
+
+.hero-proof { display: flex; gap: 34px; margin-top: 55px; }
+.hero-proof > div { display: flex; gap: 10px; align-items: center; color: var(--leaf); }
+.hero-proof span { display: grid; }
+.hero-proof strong { font-size: 12px; color: var(--green); }
+.hero-proof small { font-size: 10px; color: #738077; }
+
+.hero-visual { min-height: 570px; position: relative; }
+
+.hero-image {
+  position: absolute;
+  inset: 25px 20px 0 80px;
+  background:
+    linear-gradient(180deg, rgba(7, 37, 25, 0.05), rgba(7, 37, 25, 0.35)),
+    url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=90') center / cover;
+  border-radius: 240px 240px 16px 16px;
+  box-shadow: 30px 30px 0 var(--sand);
+}
+
+.hero-orbit {
+  position: absolute;
+  border: 1px solid rgba(93, 127, 61, 0.35);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.orbit-a { width: 430px; height: 430px; right: -90px; top: 10px; }
+.orbit-b { width: 610px; height: 610px; right: -170px; top: -80px; }
+
+.floating-card {
+  position: absolute;
+  background: #fff;
+  padding: 14px 16px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  box-shadow: 0 15px 40px rgba(8, 37, 25, 0.13);
+  color: var(--leaf);
+}
+
+.floating-card span { display: grid; font-size: 11px; font-weight: 800; }
+.floating-card small { font-size: 9px; color: #7c877f; font-weight: 500; }
+.card-top { top: 100px; left: 0; }
+.card-bottom { bottom: 40px; right: 0; }
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 62px 22px 40px;
+    gap: 30px;
+  }
+
+  .hero h1 { font-size: 52px; }
+  .hero-visual { min-height: 420px; }
+  .hero-image { inset: 20px 15px 0 45px; }
+  .hero-proof { margin-top: 35px; }
+  .floating-card { padding: 11px; }
+}
+
+@media (max-width: 520px) {
+  .hero h1 { font-size: 46px; }
+  .hero-copy > p { font-size: 14px; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .hero-proof { gap: 15px; }
+  .hero-visual { min-height: 360px; }
+  .hero-image { inset: 18px 5px 0 25px; border-radius: 180px 180px 12px 12px; }
+  .orbit-a { width: 280px; height: 280px; }
+  .orbit-b { width: 390px; height: 390px; }
+}
