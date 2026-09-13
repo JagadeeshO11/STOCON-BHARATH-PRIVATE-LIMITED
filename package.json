@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
     "framer-motion": "latest",
     "lucide-react": "latest",
     "react": "latest",
@@ -22,14 +21,11 @@
     "@types/react-dom": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "autoprefixer": "latest",
+    "@vitejs/plugin-react": "latest",
     "eslint": "latest",
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-refresh": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
     "typescript": "latest",
-    "vite": "latest",
-    "@vitejs/plugin-react": "latest"
+    "vite": "latest"
   }
 }
