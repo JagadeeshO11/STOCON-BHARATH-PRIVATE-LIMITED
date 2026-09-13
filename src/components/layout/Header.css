@@ -38,16 +38,15 @@
 
 .desktop-nav { display: flex; gap: 30px; }
 
-.desktop-nav button {
-  border: 0;
-  background: none;
+.desktop-nav a {
   color: #526058;
   font-size: 13px;
   font-weight: 700;
 }
 
-.desktop-nav button:hover,
-.desktop-nav button:focus-visible { color: var(--green); }
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible,
+.desktop-nav a.active { color: var(--green); }
 
 .nav-cta {
   display: inline-flex;
@@ -89,11 +88,8 @@
     border-bottom: 1px solid #d8d1c4;
   }
 
-  .mobile-menu button {
+  .mobile-menu a {
     padding: 14px 0;
-    border: 0;
-    background: none;
-    text-align: left;
     color: var(--green);
     font-weight: 800;
   }
