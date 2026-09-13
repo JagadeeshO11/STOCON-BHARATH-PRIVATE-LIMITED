@@ -5,6 +5,7 @@ import { ExportServices } from '../pages/ExportServices/ExportServices'
 import { HomePage } from '../pages/Home/HomePage'
 import { Products } from '../pages/Products/Products'
 import { Quality } from '../pages/Quality/Quality'
+import { Contact } from '../pages/Contact/Contact'
 
 export function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ export function AppRoutes() {
         <Route path="/products" element={<Products />} />
         <Route path="/export-services" element={<ExportServices />} />
         <Route path="/quality" element={<Quality />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </PageTransition>
