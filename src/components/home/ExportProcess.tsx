@@ -9,8 +9,31 @@ const steps = [
 ] as const
 
 export function ExportProcess() {
-  return <section className="process-section" id="export-process"><div className="section process-inner">
-    <div className="process-title"><div className="section-label light">03 / EXPORT PROCESS</div><h2>A clearer path from <em>source to shipment.</em></h2><p>Each order has its own requirements. This workflow presents the core journey we are building around export-oriented supply.</p></div>
-    <div className="process-list">{steps.map(([number,title,text]) => <div className="process-item" key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div><ArrowRight size={20}/></div>)}</div>
-  </div></section>
+  return (
+    <section className="process-section" id="export-process">
+      <div className="section process-inner">
+        <div className="process-title">
+          <div className="section-label light">03 / EXPORT PROCESS</div>
+          <h2>A clearer path from <em>source to shipment.</em></h2>
+          <p>
+            Each order has its own requirements. This workflow presents the core journey
+            around export-oriented supply.
+          </p>
+        </div>
+
+        <div className="process-list">
+          {steps.map(([number, title, description]) => (
+            <article className="process-item" key={number}>
+              <span>{number}</span>
+              <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
+              <ArrowRight size={20} aria-hidden="true" />
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
