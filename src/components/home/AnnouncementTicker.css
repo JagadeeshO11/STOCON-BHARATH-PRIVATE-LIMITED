@@ -1,0 +1,1 @@
+.ticker{background:var(--green);overflow:hidden;color:#e9e2d5;white-space:nowrap;padding:16px 0;font-family:'DM Mono';font-size:11px;letter-spacing:.13em;text-align:center}.ticker i{color:var(--gold);padding:0 17px;font-style:normal}@media(max-width:520px){.ticker{font-size:9px}}
