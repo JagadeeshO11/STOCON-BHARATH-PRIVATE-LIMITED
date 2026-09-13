@@ -1,0 +1,10 @@
+.products-page { padding: var(--section-space) var(--container-padding); }
+.products-page__intro h2 { font-size: clamp(38px, 5vw, 66px); }
+.products-page__grid { margin-top: 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.products-page__grid article { background: #fff; min-height: 480px; display: grid; grid-template-rows: 1fr auto; overflow: hidden; }
+.products-page__grid img { width: 100%; height: 310px; object-fit: cover; }
+.products-page__grid article > div { padding: 25px; }
+.products-page__grid h3 { margin: 0 0 8px; color: var(--green); font-size: 24px; }
+.products-page__grid p { color: #66736a; line-height: 1.7; font-size: 13px; }
+.products-page__grid span { color: var(--leaf); display: block; margin-top: 16px; }
+@media (max-width: 700px) { .products-page__grid { grid-template-columns: 1fr; } }
