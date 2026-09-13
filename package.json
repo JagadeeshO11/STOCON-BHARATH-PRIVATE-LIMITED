@@ -15,7 +15,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest",
-    "react-icons": "latest"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@types/react": "latest",
