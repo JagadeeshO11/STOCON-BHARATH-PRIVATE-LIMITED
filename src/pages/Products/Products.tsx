@@ -1,6 +1,7 @@
 import { ArrowRight, Globe2, PackageSearch } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { productCategories } from '../../data/products'
+import { companyContent } from '../../data/companyContent'
 import './Products.css'
 
 export function Products() {
@@ -8,41 +9,44 @@ export function Products() {
     <>
       <section className="page-hero page-hero--products">
         <div>
-          <span className="section-label">OUR PRODUCT PORTFOLIO</span>
-          <h1>Natural products, <em>ready for global markets.</em></h1>
-          <p>STOCON focuses on food products, fruits, vegetables and spices, with supply shaped around customer requirements.</p>
+          <span className="section-label">OUR PRODUCT CATEGORIES</span>
+          <h1>Food and natural products for <em>export opportunities.</em></h1>
+          <p>STOCON’s stated business focus covers food products, fruits, vegetables and spices of different types.</p>
         </div>
       </section>
 
       <section className="page-section products-page">
         <div className="products-page__intro">
           <div>
-            <span className="section-label">CATEGORIES</span>
-            <h2>Explore our <em>export-focused range.</em></h2>
+            <span className="section-label">WHAT WE FOCUS ON</span>
+            <h2>Four core categories. <em>One export direction.</em></h2>
           </div>
-          <div className="products-page__note"><PackageSearch size={24} /><p>Product discussions can be aligned with buyer requirements and intended markets.</p></div>
+          <div className="products-page__note"><PackageSearch size={24} /><p>Specific product discussions can be taken forward according to customer requirements.</p></div>
         </div>
 
         <div className="products-page__grid">
-          {productCategories.map((product, index) => (
-            <article key={product.id}>
-              <div className="products-page__image">
-                <img src={product.image} alt={product.title} loading="lazy" />
-                <span>0{index + 1}</span>
-              </div>
-              <div className="products-page__content">
-                <h3>{product.title}</h3>
-                <p>{product.description}</p>
-                <Link to="/contact">Send product inquiry <ArrowRight size={17} /></Link>
-              </div>
-            </article>
-          ))}
+          {productCategories.map((product, index) => {
+            const detail = companyContent.productCategories[index]
+            return (
+              <article key={product.id}>
+                <div className="products-page__image">
+                  <img src={product.image} alt={product.title} loading="lazy" />
+                  <span>0{index + 1}</span>
+                </div>
+                <div className="products-page__content">
+                  <h3>{detail.title}</h3>
+                  <p>{detail.description}</p>
+                  <Link to="/contact">Discuss this category <ArrowRight size={17} /></Link>
+                </div>
+              </article>
+            )
+          })}
         </div>
 
         <div className="products-page__export">
           <Globe2 size={34} />
-          <div><span className="section-label">EXPORT DIRECTION</span><h3>From India toward international markets.</h3></div>
-          <Link to="/export-services">Explore export services <ArrowRight size={18} /></Link>
+          <div><span className="section-label">BUYER REQUIREMENTS</span><h3>Looking for a particular product?</h3><p>Share your requirement with STOCON so the discussion can be aligned with the product category and customer need.</p></div>
+          <Link to="/contact">Send an enquiry <ArrowRight size={18} /></Link>
         </div>
       </section>
     </>
