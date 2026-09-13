@@ -1,71 +1,45 @@
-import { useState } from 'react'
 import { ArrowRight, Leaf, Menu, X } from 'lucide-react'
+import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import { navigationItems } from '../../constants/navigation'
 import './Header.css'
-
-const navigation = [
-  ['Home', 'home'],
-  ['About', 'about'],
-  ['Products', 'products'],
-  ['Export Process', 'export-process'],
-  ['Contact', 'contact'],
-] as const
 
 export function Header() {
   const [open, setOpen] = useState(false)
 
-  const go = (id: string) => {
-    setOpen(false)
-    document.getElementById(id)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
-  }
-
   return (
     <header className="header">
-      <button
-        className="brand"
-        onClick={() => go('home')}
-        aria-label="Go to STOCON home"
-      >
+      <Link className="brand" to="/" aria-label="Go to STOCON home">
         <span className="brand-mark"><Leaf size={21} /></span>
-        <span>
-          <strong>STOCON</strong>
-          <small>BHARATH PRIVATE LIMITED</small>
-        </span>
-      </button>
+        <span><strong>STOCON</strong><small>BHARATH PRIVATE LIMITED</small></span>
+      </Link>
 
       <nav className="desktop-nav" aria-label="Primary navigation">
-        {navigation.map(([label, id]) => (
-          <button key={id} onClick={() => go(id)}>
+        {navigationItems.map(({ label, path }) => (
+          <NavLink key={path} to={path} className={({ isActive }) => isActive ? 'active' : ''}>
             {label}
-          </button>
+          </NavLink>
         ))}
       </nav>
 
-      <button className="nav-cta desktop-only" onClick={() => go('contact')}>
+      <Link className="nav-cta desktop-only" to="/contact">
         Send Inquiry <ArrowRight size={16} />
-      </button>
+      </Link>
 
-      <button
-        className="menu-btn"
-        onClick={() => setOpen((value) => !value)}
-        aria-label="Toggle navigation"
-        aria-expanded={open}
-      >
+      <button className="menu-btn" onClick={() => setOpen((value) => !value)} aria-label="Toggle navigation" aria-expanded={open}>
         {open ? <X /> : <Menu />}
       </button>
 
       {open && (
         <nav className="mobile-menu" aria-label="Mobile navigation">
-          {navigation.map(([label, id]) => (
-            <button key={id} onClick={() => go(id)}>
+          {navigationItems.map(({ label, path }) => (
+            <NavLink key={path} to={path} onClick={() => setOpen(false)}>
               {label}
-            </button>
+            </NavLink>
           ))}
-          <button className="mobile-inquiry" onClick={() => go('contact')}>
+          <NavLink className="mobile-inquiry" to="/contact" onClick={() => setOpen(false)}>
             Send Inquiry
-          </button>
+          </NavLink>
         </nav>
       )}
     </header>
