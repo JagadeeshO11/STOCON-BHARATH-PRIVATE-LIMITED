@@ -1,21 +1,22 @@
 import { ArrowRight, ClipboardCheck, Globe2, PackageCheck, SearchCheck } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { companyContent } from '../../data/companyContent'
 import './ExportServices.css'
 
-const steps=[
- ['01','Understand the requirement','Product and buyer requirements are reviewed before the export process is coordinated.'],
- ['02','Prepare the supply','Product selection and preparation are aligned with the agreed requirement.'],
- ['03','Coordinate the shipment','Packaging and shipment preparation are coordinated for the order.'],
- ['04','Stay connected','Clear communication supports the journey from inquiry through export coordination.'],
+const focusAreas=[
+ ['01','Export-first business','Export is the primary business priority of STOCON BHARATH PRIVATE LIMITED.'],
+ ['02','Product categories','Current business discussions focus on food products, fruits, vegetables and spices.'],
+ ['03','Customer requirements','Product and domestic-sales discussions may be considered according to customer requirements.'],
+ ['04','Future growth','Frozen-condition seafood export has been identified as a future business direction.'],
 ]
 
 export function ExportServices(){
  return <>
-  <section className="page-hero page-hero--services"><div><span className="section-label">EXPORT SERVICES</span><h1>From requirement to <em>export coordination.</em></h1><p>A clear, step-by-step approach designed around product requirements and international business needs.</p></div></section>
+  <section className="page-hero page-hero--services"><div><span className="section-label">EXPORT FOCUS</span><h1>A business direction built around <em>international opportunities.</em></h1><p>{companyContent.overview.primaryFocus}</p></div></section>
   <section className="services-page">
-   <div className="services-page__intro"><div><span className="section-label">OUR PROCESS</span><h2>Clear steps. <em>Focused coordination.</em></h2></div><p>STOCON's business approach keeps customer requirements at the center of product and export discussions.</p></div>
-   <div className="services-page__steps">{steps.map(([no,title,text],i)=>{const Icon=[SearchCheck,ClipboardCheck,PackageCheck,Globe2][i];return <article key={no}><span>{no}</span><Icon size={25}/><h3>{title}</h3><p>{text}</p></article>})}</div>
-   <div className="services-page__cta"><div><span className="section-label">START AN INQUIRY</span><h3>Have a product requirement?</h3><p>Tell us what you are looking for and begin the conversation with STOCON.</p></div><Link to="/contact">Contact STOCON <ArrowRight size={18}/></Link></div>
+   <div className="services-page__intro"><div><span className="section-label">WHAT STOCON DOES</span><h2>Start with the requirement. <em>Build the right discussion.</em></h2></div><p>STOCON is an export-focused business. The exact product, destination and commercial requirements can be discussed directly with the company.</p></div>
+   <div className="services-page__steps">{focusAreas.map(([no,title,text],i)=>{const Icon=[Globe2,PackageCheck,SearchCheck,ClipboardCheck][i];return <article key={no}><span>{no}</span><Icon size={25}/><h3>{title}</h3><p>{text}</p></article>})}</div>
+   <div className="services-page__cta"><div><span className="section-label">START AN ENQUIRY</span><h3>Have a food or agricultural product requirement?</h3><p>Tell STOCON what you are looking for and begin a direct business discussion.</p></div><Link to="/contact">Send enquiry <ArrowRight size={18}/></Link></div>
   </section>
  </>
 }
