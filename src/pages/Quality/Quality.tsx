@@ -5,18 +5,18 @@ import './Quality.css'
 type Pillar = { title: string; text: string; icon: LucideIcon }
 
 const pillars: Pillar[] = [
-  { title: 'Product selection', text: 'Product selection is aligned with customer and export requirements.', icon: CheckCircle2 },
-  { title: 'Preparation', text: 'Packaging and shipment preparation are planned for the order.', icon: PackageCheck },
-  { title: 'Clear coordination', text: 'Customer requirements remain central to the supply and export process.', icon: ClipboardCheck },
+  { title: 'Clear product requirement', text: 'The product category and customer requirement should be clearly understood before business discussions move forward.', icon: CheckCircle2 },
+  { title: 'Requirement-based discussion', text: 'STOCON’s stated approach allows product and domestic-sales discussions to be considered according to customer requirements.', icon: PackageCheck },
+  { title: 'Direct communication', text: 'Buyers and customers can contact STOCON directly to discuss their food, fruit, vegetable or spice requirements.', icon: ClipboardCheck },
 ]
 
 export function Quality() {
   return <>
-    <section className="page-hero page-hero--quality"><div><span className="section-label">QUALITY & APPROACH</span><h1>Careful coordination for <em>every requirement.</em></h1><p>STOCON is building its export business around suitable products, customer requirements and clear coordination.</p></div></section>
+    <section className="page-hero page-hero--quality"><div><span className="section-label">QUALITY & REQUIREMENTS</span><h1>The right conversation starts with <em>a clear requirement.</em></h1><p>STOCON’s current business information emphasizes product categories, customer requirements and an export-first direction.</p></div></section>
     <section className="quality-page">
-      <div className="quality-page__intro"><div><span className="section-label">OUR APPROACH</span><h2>Quality begins with <em>the right requirement.</em></h2></div><ShieldCheck size={52}/></div>
+      <div className="quality-page__intro"><div><span className="section-label">OUR APPROACH</span><h2>Understand the requirement. <em>Then move forward.</em></h2></div><ShieldCheck size={52}/></div>
       <div className="quality-page__grid">{pillars.map(({ title, text, icon: Icon }, index) => <article key={title}><span>0{index + 1}</span><Icon size={30}/><h3>{title}</h3><p>{text}</p></article>)}</div>
-      <div className="quality-page__statement"><div><span className="section-label">STOCON APPROACH</span><h3>Clear requirements create a clearer export journey.</h3></div><Link to="/contact">Discuss your requirement →</Link></div>
+      <div className="quality-page__statement"><div><span className="section-label">BUSINESS DISCUSSION</span><h3>Food products, fruits, vegetables or spices? Tell us what you need.</h3></div><Link to="/contact">Send an enquiry →</Link></div>
     </section>
   </>
 }
