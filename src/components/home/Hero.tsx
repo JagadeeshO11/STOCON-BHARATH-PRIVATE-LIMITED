@@ -6,14 +6,14 @@ import './Hero.css'
 const logoUrl='https://res.cloudinary.com/dwmjz9csc/image/upload/v1789366884/3fe8f148-a5fe-4691-b999-b68f25e84bc2.png'
 
 const categories=[
- {name:'Spices',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375073/spices.jpg',pos:'node-spices'},
- {name:'Pulses',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375118/grains.jpg',pos:'node-pulses'},
- {name:'Oil Seeds',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375085/oil-seeds.jpg',pos:'node-oil'},
+ {name:'Spices',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp',pos:'node-spices'},
+ {name:'Pulses',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789376269/hero-pulses.png',pos:'node-pulses'},
+ {name:'Oil Seeds',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789376292/hero-oil-seeds.jpg',pos:'node-oil'},
  {name:'Value Added',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375090/value-added.jpg',pos:'node-value'},
- {name:'Dehydrated',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375098/dehydrated.jpg',pos:'node-dehydrated'},
- {name:'Herbs',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375104/herbs.jpg',pos:'node-herbs'},
- {name:'Nuts',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375104/herbs.jpg',pos:'node-nuts'},
- {name:'Grains',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375118/grains.jpg',pos:'node-grains'},
+ {name:'Dehydrated',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789376299/hero-dehydrated.jpg',pos:'node-dehydrated'},
+ {name:'Herbs',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789376309/hero-herbs.jpg',pos:'node-herbs'},
+ {name:'Nuts',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789376292/hero-oil-seeds.jpg',pos:'node-nuts'},
+ {name:'Grains',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789376279/hero-grains.webp',pos:'node-grains'},
 ]
 
 export function Hero(){
