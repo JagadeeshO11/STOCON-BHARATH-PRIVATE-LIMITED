@@ -1,4 +1,5 @@
 import { company } from '../../constants/company'
+import { motion } from 'framer-motion'
 import './AboutSection.css'
 
 const stats = [
