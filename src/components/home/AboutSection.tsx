@@ -15,7 +15,7 @@ export function AboutSection() {
       <div className="section-label">01 / ABOUT STOCON</div>
 
       <div className="about-grid">
-        <h2>Building an export journey around <em>India's natural abundance.</em></h2>
+        <motion.h2 initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>Building an export journey around <em>India's natural abundance.</em></motion.h2>
 
         <div className="about-copy">
           <p>
@@ -31,10 +31,10 @@ export function AboutSection() {
 
       <div className="about-stats">
         {stats.map(([value, label]) => (
-          <div key={label}>
+          <motion.div key={label} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-4}}>
             <strong>{value}</strong>
             <span>{label}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
