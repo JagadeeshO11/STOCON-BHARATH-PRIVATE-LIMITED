@@ -30,5 +30,3 @@ export function Contact() {
     </>
   )
 }
-import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
-import { motion } from 'framer-motion'
