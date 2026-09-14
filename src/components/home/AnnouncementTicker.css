@@ -1,10 +1,10 @@
-.ticker{margin-top:14px;overflow:hidden;background:var(--brand-deep);color:#eaf7f4;padding:15px 0;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.13em;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
-.ticker__viewport{width:100%;overflow:hidden}
-.ticker__track{display:flex;width:max-content;will-change:transform;animation:ticker-scroll 22s linear infinite}
-.ticker__group{display:flex;flex:none;white-space:nowrap}
-.ticker__group span{display:inline-flex;align-items:center;flex:none}
-.ticker i{color:var(--brand-aqua);padding:0 24px;font-style:normal}
-@keyframes ticker-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.ticker-wrap{padding:18px var(--container-padding) 0;background:#f4faf9}
+.ticker{width:100%;overflow:hidden;border-radius:12px;background:linear-gradient(90deg,var(--brand-deep),var(--brand-teal));color:#eaf7f4;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 26px rgba(18,63,70,.08)}
+.ticker__track{display:flex;width:max-content;will-change:transform;animation:ticker-scroll 28s linear infinite}
+.ticker__item{display:inline-flex;align-items:center;gap:22px;flex:none;padding:15px 22px 15px 0;font-family:'DM Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.12em;white-space:nowrap}
+.ticker__item:first-child{padding-left:22px}
+.ticker__item b{color:var(--brand-aqua);font-size:12px}
+@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .ticker:hover .ticker__track{animation-play-state:paused}
-@media(prefers-reduced-motion:reduce){.ticker__track{animation:none;transform:none}}
-@media(max-width:700px){.ticker{margin-top:12px;padding:13px 0;font-size:9px}.ticker i{padding:0 17px}.ticker__track{animation-duration:18s}}
+@media(prefers-reduced-motion:reduce){.ticker__track{animation:none}}
+@media(max-width:700px){.ticker-wrap{padding:14px 16px 0}.ticker{border-radius:10px}.ticker__item{font-size:9px;letter-spacing:.1em;padding-top:13px;padding-bottom:13px;gap:16px}.ticker__item:first-child{padding-left:16px}.ticker__track{animation-duration:21s}}
