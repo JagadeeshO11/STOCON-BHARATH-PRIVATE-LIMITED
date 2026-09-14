@@ -23,16 +23,16 @@ export function Hero(){
    <div className="hero-video-overlay"/>
    <div className="hero-inner">
      <motion.div className="hero-network" initial={{opacity:0,scale:.96}} animate={{opacity:1,scale:1}} transition={{duration:.75}}>
-       <svg className="network-lines" viewBox="0 0 760 620" aria-hidden="true">
-         <circle className="orbit orbit-main" cx="380" cy="310" r="220"/>
-         <circle className="orbit orbit-inner" cx="380" cy="310" r="126"/>
-         <path className="spokes" d="M380 310L380 90M380 310L570.5 200M380 310L570.5 420M380 310L380 530M380 310L189.5 420M380 310L189.5 200"/>
-         <circle className="connector" cx="380" cy="90" r="6"/>
-         <circle className="connector" cx="570.5" cy="200" r="6"/>
-         <circle className="connector" cx="570.5" cy="420" r="6"/>
-         <circle className="connector" cx="380" cy="530" r="6"/>
-         <circle className="connector" cx="189.5" cy="420" r="6"/>
-         <circle className="connector" cx="189.5" cy="200" r="6"/>
+       <svg className="network-lines" viewBox="0 0 640 640" aria-hidden="true">
+         <circle className="orbit orbit-main" cx="320" cy="320" r="230"/>
+         <circle className="orbit orbit-inner" cx="320" cy="320" r="128"/>
+         <path className="spokes" d="M320 320L320 90M320 320L519.2 205M320 320L519.2 435M320 320L320 550M320 320L120.8 435M320 320L120.8 205"/>
+         <circle className="connector" cx="320" cy="90" r="6"/>
+         <circle className="connector" cx="519.2" cy="205" r="6"/>
+         <circle className="connector" cx="519.2" cy="435" r="6"/>
+         <circle className="connector" cx="320" cy="550" r="6"/>
+         <circle className="connector" cx="120.8" cy="435" r="6"/>
+         <circle className="connector" cx="120.8" cy="205" r="6"/>
        </svg>
 
        <div className="brand-hub">
