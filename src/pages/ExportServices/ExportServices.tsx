@@ -1,24 +1,10 @@
-import { ArrowRight, ClipboardCheck, Globe2, PackageCheck, SearchCheck } from 'lucide-react'
+import { ArrowRight, ClipboardCheck, Globe2, PackageCheck, SearchCheck, MessagesSquare, Truck, Handshake } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
-import { companyContent } from '../../data/companyContent'
 import './ExportServices.css'
 
-const focusAreas=[
- ['01','Export-first business','Export is the primary business priority of STOCON BHARATH PRIVATE LIMITED.'],
- ['02','Product categories','Current business discussions focus on food products, fruits, vegetables and spices.'],
- ['03','Customer requirements','Product and domestic-sales discussions may be considered according to customer requirements.'],
- ['04','Future growth','Frozen-condition seafood export has been identified as a future business direction.'],
-]
+const focusAreas=[['01','Export-first business','Export is the primary business priority of STOCON BHARATH PRIVATE LIMITED.'],['02','Product categories','Current business discussions focus on food products, fruits, vegetables and spices.'],['03','Customer requirements','Product and domestic-sales discussions may be considered according to customer requirements.'],['04','Future growth','Frozen-condition seafood export has been identified as a future business direction.']]
+const process=[['Tell us your requirement','Share the product category, quantity, destination and any relevant buyer requirements.',MessagesSquare],['Review the opportunity','The requirement can be discussed around product availability and business expectations.',SearchCheck],['Build the discussion','Product specifications and commercial requirements can be clarified through direct communication.',Handshake],['Move toward supply','Once the relevant details are aligned, the business discussion can move to the next stage.',Truck]]
 
-export function ExportServices(){
- return <>
-  <section className="page-hero page-hero--services"><AnimatedPageHero label="EXPORT FOCUS" prefix="A business direction built around" typed="international opportunities." description="Export is the primary business priority of STOCON BHARATH PRIVATE LIMITED." /></section>
-  <section className="services-page">
-   <div className="services-page__intro"><div><span className="section-label">WHAT STOCON DOES</span><h2>Start with the requirement. <em>Build the right discussion.</em></h2></div><p>STOCON is an export-focused business. The exact product, destination and commercial requirements can be discussed directly with the company.</p></div>
-   <div className="services-page__steps">{focusAreas.map(([no,title,text],i)=>{const Icon=[Globe2,PackageCheck,SearchCheck,ClipboardCheck][i];return <motion.article key={no} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-7}} transition={{duration:.35}}><span>{no}</span><Icon size={25}/><h3>{title}</h3><p>{text}</p></motion.article>})}</div>
-   <div className="services-page__cta"><div><span className="section-label">START AN ENQUIRY</span><h3>Have a food or agricultural product requirement?</h3><p>Tell STOCON what you are looking for and begin a direct business discussion.</p></div><Link to="/contact">Send enquiry <ArrowRight size={18}/></Link></div>
-  </section>
- </>
-}
+export function ExportServices(){return <><section className="page-hero page-hero--services"><AnimatedPageHero label="EXPORT FOCUS" prefix="A business direction built around" typed="international opportunities." description="Export is the primary business priority of STOCON BHARATH PRIVATE LIMITED."/></section><section className="services-page"><div className="services-page__intro"><div><span className="section-label">WHAT STOCON DOES</span><h2>Start with the requirement. <em>Build the right discussion.</em></h2></div><p>STOCON is an export-focused business. The exact product, destination and commercial requirements can be discussed directly with the company.</p></div><div className="services-page__steps">{focusAreas.map(([no,title,text],i)=>{const Icon=[Globe2,PackageCheck,SearchCheck,ClipboardCheck][i];return <motion.article key={no} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-7}}><span>{no}</span><Icon size={25}/><h3>{title}</h3><p>{text}</p></motion.article>})}</div><section className="services-process"><div className="services-process__head"><span className="section-label">HOW TO START</span><h2>A simple path from <em>enquiry to discussion.</em></h2><p>Every enquiry can begin with the basics. The more clearly the requirement is described, the easier it is to start a useful business conversation.</p></div><div className="services-process__grid">{process.map(([title,text,Icon],i)=>{const I=Icon as typeof Globe2;return <article key={String(title)}><span>STEP 0{i+1}</span><I/><h3>{String(title)}</h3><p>{String(text)}</p></article>})}</div></section><section className="services-categories"><span className="section-label">CURRENT PRODUCT DIRECTION</span><h2>Six categories. <em>One export-focused conversation.</em></h2><div>{['Spices & Herbs','Grains & Pulses','Oil Seeds','Fruits & Vegetables','Dehydrated Products','Processed Foods'].map(x=><Link key={x} to="/products">{x}<ArrowRight size={16}/></Link>)}</div></section><div className="services-page__cta"><div><span className="section-label">START AN ENQUIRY</span><h3>Have a food or agricultural product requirement?</h3><p>Tell STOCON what you are looking for and begin a direct business discussion.</p></div><Link to="/contact">Send enquiry <ArrowRight size={18}/></Link></div></section></>}
