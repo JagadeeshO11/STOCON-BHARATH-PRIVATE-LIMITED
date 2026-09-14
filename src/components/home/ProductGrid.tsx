@@ -26,7 +26,7 @@ export function ProductGrid() {
               <div className="product-info">
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
-                <Link to={'/products#'+product.id} aria-label={'Explore '+product.title}>
+                <Link to={'/products?category='+product.id} aria-label={'Explore '+product.title}>
                   Explore category <ArrowRight size={17}/>
                 </Link>
               </div>
