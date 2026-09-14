@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import './Hero.css'
 
 const logoUrl='https://res.cloudinary.com/dwmjz9csc/image/upload/v1789366884/3fe8f148-a5fe-4691-b999-b68f25e84bc2.png'
+const heroVideo='https://res.cloudinary.com/dwmjz9csc/video/upload/v1789390588/now_genrate_the_video_tqrqom.mp4'
 
 const categories=[
  {name:'Spices & Herbs',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp',pos:'node-spices'},
@@ -16,19 +17,22 @@ const categories=[
 
 export function Hero(){
  return <section className="hero" id="home">
-   <div className="hero-backdrop"/>
+   <video className="hero-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">
+     <source src={heroVideo} type="video/mp4"/>
+   </video>
+   <div className="hero-video-overlay"/>
    <div className="hero-inner">
      <motion.div className="hero-network" initial={{opacity:0,scale:.96}} animate={{opacity:1,scale:1}} transition={{duration:.75}}>
        <svg className="network-lines" viewBox="0 0 760 620" aria-hidden="true">
          <circle className="orbit orbit-main" cx="380" cy="310" r="220"/>
          <circle className="orbit orbit-inner" cx="380" cy="310" r="126"/>
-         <path className="spokes" d="M380 310L380 90M380 310L570 200M380 310L570 420M380 310L380 530M380 310L190 420M380 310L190 200"/>
+         <path className="spokes" d="M380 310L380 90M380 310L570.5 200M380 310L570.5 420M380 310L380 530M380 310L189.5 420M380 310L189.5 200"/>
          <circle className="connector" cx="380" cy="90" r="6"/>
-         <circle className="connector" cx="570" cy="200" r="6"/>
-         <circle className="connector" cx="570" cy="420" r="6"/>
+         <circle className="connector" cx="570.5" cy="200" r="6"/>
+         <circle className="connector" cx="570.5" cy="420" r="6"/>
          <circle className="connector" cx="380" cy="530" r="6"/>
-         <circle className="connector" cx="190" cy="420" r="6"/>
-         <circle className="connector" cx="190" cy="200" r="6"/>
+         <circle className="connector" cx="189.5" cy="420" r="6"/>
+         <circle className="connector" cx="189.5" cy="200" r="6"/>
        </svg>
 
        <div className="brand-hub">
