@@ -1,5 +1,7 @@
 import { CheckCircle2, ClipboardCheck, PackageCheck, ShieldCheck, type LucideIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
 import './Quality.css'
 
 type Pillar = { title: string; text: string; icon: LucideIcon }
@@ -20,6 +22,3 @@ export function Quality() {
     </section>
   </>
 }
-
-import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
-import { motion } from 'framer-motion'
