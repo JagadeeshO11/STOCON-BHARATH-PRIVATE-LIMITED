@@ -23,7 +23,7 @@
 .future-vision__icons {
   display: flex;
   gap: 14px;
-  color: #d8bd82;
+  color: var(--cyan);
 }
 
 .future-vision__card h3 {
@@ -33,7 +33,7 @@
 
 .future-vision__card p {
   margin: 0;
-  color: #c7d2ca;
+  color: #D6E8E4;
   font-size: 13px;
   line-height: 1.8;
 }
