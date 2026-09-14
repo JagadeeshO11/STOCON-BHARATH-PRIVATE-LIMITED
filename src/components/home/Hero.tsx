@@ -20,7 +20,10 @@ export function Hero(){
    <div className="hero-inner">
      <motion.div className="hero-network" initial={{opacity:0,scale:.96}} animate={{opacity:1,scale:1}} transition={{duration:.75}}>
        <svg className="network-lines" viewBox="0 0 760 620" aria-hidden="true">
-         <path d="M380 310L380 70M380 310L588 190M380 310L588 430M380 310L380 550M380 310L172 430M380 310L172 190" />
+         <path className="orbit" d="M380 88L590 208L590 412L380 532L170 412L170 208Z"/>
+         <path className="spokes" d="M380 310L380 88M380 310L590 208M380 310L590 412M380 310L380 532M380 310L170 412M380 310L170 208"/>
+         <circle cx="380" cy="88" r="7"/><circle cx="590" cy="208" r="7"/><circle cx="590" cy="412" r="7"/>
+         <circle cx="380" cy="532" r="7"/><circle cx="170" cy="412" r="7"/><circle cx="170" cy="208" r="7"/>
        </svg>
        <div className="brand-hub"><div className="brand-hub__ring"><img className="brand-hub__logo" src={logoUrl.replace('/upload/','/upload/e_make_transparent:12/')} alt="STOCON Bharath Private Limited"/></div></div>
        {categories.map((item,index)=><motion.article key={item.name} className={'category-node '+item.pos} initial={{opacity:0,scale:.65}} animate={{opacity:1,scale:1}} transition={{delay:.15+index*.07,type:'spring',stiffness:110}}>
