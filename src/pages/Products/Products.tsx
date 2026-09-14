@@ -1,5 +1,7 @@
 import { ArrowRight, Globe2, PackageSearch } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
 import { productCategories } from '../../data/products'
 import { companyContent } from '../../data/companyContent'
 import './Products.css'
@@ -46,6 +48,3 @@ export function Products() {
     </>
   )
 }
-
-import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
-import { motion } from 'framer-motion'
