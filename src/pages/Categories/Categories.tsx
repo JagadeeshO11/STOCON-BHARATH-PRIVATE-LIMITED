@@ -1,70 +1,9 @@
-import { ArrowRight, CheckCircle2, PackageSearch, Tag } from 'lucide-react'
+import { PackageSearch, Tag } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
+import { ProductCatalogModal } from '../../components/catalog/ProductCatalogModal'
 import { productCategories } from '../../data/products'
+import type { ProductCategory } from '../../types/product'
 import './Categories.css'
-
-const highlights = ['Export-focused categories', 'Fresh & processed food ranges', 'Direct buyer communication']
-
-export function Categories() {
-  return (
-    <>
-      <section className="page-hero page-hero--products">
-        <AnimatedPageHero
-          label="OUR CATEGORIES"
-          prefix="Explore India's finest products by"
-          typed="category."
-          description="Choose a category to explore the products available for export and discuss your requirement directly with STOCON."
-        />
-      </section>
-
-      <section className="categories-page">
-        <div className="categories-page__intro">
-          <div>
-            <span className="section-label">EXPLORE THE CATALOGUE</span>
-            <h2>Six categories. <em>One global outlook.</em></h2>
-          </div>
-          <div className="categories-page__note">
-            <PackageSearch size={25}/>
-            <p>Browse our product categories and open the dedicated products page for the category that matches your sourcing requirement.</p>
-          </div>
-        </div>
-
-        <div className="categories-page__highlights">
-          {highlights.map((item, i) => (
-            <motion.div key={item} initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.08}}>
-              <CheckCircle2 size={17}/>{item}
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="categories-page__grid" aria-label="Product categories">
-          {productCategories.map((category, index) => (
-            <motion.article
-              key={category.id}
-              className="categories-page__card"
-              initial={{opacity:0,y:20}}
-              whileInView={{opacity:1,y:0}}
-              viewport={{once:true}}
-              transition={{delay:index*.06}}
-              whileHover={{y:-6}}
-            >
-              <img src={category.image} alt={category.title} />
-              <div className="categories-page__shade" />
-              <span className="categories-page__number">0{index + 1}</span>
-              <div className="categories-page__copy">
-                <div className="categories-page__tag"><Tag size={12}/> CATEGORY</div>
-                <h3>{category.title}</h3>
-                <p>{category.description}</p>
-                <Link to={'/products?category=' + category.id}>
-                  Explore products <ArrowRight size={17}/>
-                </Link>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </section>
-    </>
-  )
-}
+export function Categories(){const [selectedCategory,setSelectedCategory]=useState<ProductCategory|null>(null);return <><section className="page-hero page-hero--products"><AnimatedPageHero label="OUR CATEGORIES" prefix="Explore India's finest products by" typed="category." description="Choose a category and open its product catalogue instantly without leaving the page."/></section><section className="categories-page"><div className="categories-page__intro"><div><span className="section-label">OUR PRODUCT CATEGORIES</span><h2>Explore what India <em>grows and creates.</em></h2></div><div className="categories-page__note"><PackageSearch size={25}/><p>Tap any category card to open the complete product catalogue and send your requirement directly on WhatsApp.</p></div></div><div className="categories-page__grid">{productCategories.map((category,index)=><motion.button type="button" key={category.id} className="categories-page__card" initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:index*.06}} whileHover={{y:-6}} onClick={()=>setSelectedCategory(category)}><img src={category.image} alt={category.title}/><div className="categories-page__shade"/><span className="categories-page__number">0{index+1}</span><div className="categories-page__copy"><div className="categories-page__tag"><Tag size={12}/> CATEGORY</div><h3>{category.title}</h3><p>{category.description}</p><span className="categories-page__action">View product catalogue</span></div></motion.button>)}</div></section><ProductCatalogModal category={selectedCategory} onClose={()=>setSelectedCategory(null)}/></>}
