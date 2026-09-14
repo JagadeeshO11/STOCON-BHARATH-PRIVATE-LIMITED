@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 import './ExportProcess.css'
 
 const steps = [
@@ -23,14 +24,14 @@ export function ExportProcess() {
 
         <div className="process-list">
           {steps.map(([number, title, description]) => (
-            <article className="process-item" key={number}>
+            <motion.article className="process-item" key={number} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-6}}>
               <span>{number}</span>
               <div>
                 <h3>{title}</h3>
                 <p>{description}</p>
               </div>
               <ArrowRight size={20} aria-hidden="true" />
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>
