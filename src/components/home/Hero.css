@@ -36,7 +36,7 @@
 
 .hero-copy > p {
   max-width: 560px;
-  color: #59655d;
+  color: #52686B;
   font-size: 16px;
   line-height: 1.8;
 }
@@ -53,7 +53,7 @@
   align-items: center;
   gap: 9px;
   border: 0;
-  background: var(--green);
+  background: linear-gradient(135deg, var(--green), var(--blue));
   color: #fff;
   padding: 16px 22px;
   font-size: 12px;
@@ -75,7 +75,7 @@
 .hero-proof > div { display: flex; gap: 10px; align-items: center; color: var(--leaf); }
 .hero-proof span { display: grid; }
 .hero-proof strong { font-size: 12px; color: var(--green); }
-.hero-proof small { font-size: 10px; color: #738077; }
+.hero-proof small { font-size: 10px; color: #71888A; }
 
 .hero-visual { min-height: 570px; position: relative; }
 
@@ -83,7 +83,7 @@
   position: absolute;
   inset: 25px 20px 0 80px;
   background:
-    linear-gradient(180deg, rgba(7, 37, 25, 0.05), rgba(7, 37, 25, 0.35)),
+    linear-gradient(180deg, rgba(23, 63, 70, 0.05), rgba(23, 63, 70, 0.35)),
     url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=90') center / cover;
   border-radius: 240px 240px 16px 16px;
   box-shadow: 30px 30px 0 var(--sand);
@@ -91,7 +91,7 @@
 
 .hero-orbit {
   position: absolute;
-  border: 1px solid rgba(93, 127, 61, 0.35);
+  border: 1px solid rgba(133, 209, 189, 0.55);
   border-radius: 50%;
   z-index: -1;
 }
@@ -106,12 +106,12 @@
   display: flex;
   gap: 9px;
   align-items: center;
-  box-shadow: 0 15px 40px rgba(8, 37, 25, 0.13);
+  box-shadow: 0 15px 40px rgba(116, 158, 228, 0.16);
   color: var(--leaf);
 }
 
 .floating-card span { display: grid; font-size: 11px; font-weight: 800; }
-.floating-card small { font-size: 9px; color: #7c877f; font-weight: 500; }
+.floating-card small { font-size: 9px; color: #71888A; font-weight: 500; }
 .card-top { top: 100px; left: 0; }
 .card-bottom { bottom: 40px; right: 0; }
 
