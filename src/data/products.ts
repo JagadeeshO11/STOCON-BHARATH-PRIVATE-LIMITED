@@ -1,8 +1,10 @@
 import type { ProductCategory } from '../types/product'
 
 export const productCategories: ProductCategory[] = [
-  { id: 'fruits', title: 'Fresh Fruits', description: 'Naturally sourced fruits selected for export requirements.', image: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=900&q=85' },
-  { id: 'vegetables', title: 'Fresh Vegetables', description: 'Farm-fresh vegetables for international buyers and supply partners.', image: 'https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=900&q=85' },
-  { id: 'spices', title: 'Indian Spices', description: 'Aromatic Indian spices and food ingredients for global markets.', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85' },
-  { id: 'food', title: 'Food Products', description: 'Quality food products supplied according to customer requirements.', image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=85' },
+  { id: 'spices-herbs', title: 'Spices & Herbs', description: 'Aromatic Indian spices and carefully selected herbs for global markets.', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp' },
+  { id: 'grains-pulses', title: 'Grains & Pulses', description: 'Quality grains, pulses and staples sourced for international supply.', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376279/hero-grains.webp' },
+  { id: 'oil-seeds', title: 'Oil Seeds', description: 'Premium oil seeds selected to meet export and buyer requirements.', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376292/hero-oil-seeds.jpg' },
+  { id: 'fruits-vegetables', title: 'Fruits & Vegetables', description: 'Fresh produce sourced with care for dependable global distribution.', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389015/hero-fresh-fruits-vegetables.png' },
+  { id: 'dehydrated-products', title: 'Dehydrated Products', description: 'Convenient, quality dehydrated ingredients and food products.', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389022/hero-dehydrated-products.jpg' },
+  { id: 'processed-foods', title: 'Processed Foods', description: 'Export-ready processed food products for international partners.', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389031/hero-processed-foods.jpg' },
 ]
