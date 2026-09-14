@@ -1,39 +1,8 @@
-import { ArrowRight, Tag } from 'lucide-react'
+import { Tag } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { productCategories } from '../../data/products'
+import type { ProductCategory } from '../../types/product'
+import { ProductCatalogModal } from '../catalog/ProductCatalogModal'
 import './ProductGrid.css'
-
-export function ProductGrid() {
-  return (
-    <section className="products-section" id="product-categories">
-      <div className="section products-shell">
-        <div className="section-head">
-          <div>
-            <div className="section-label">OUR PRODUCT CATEGORIES</div>
-            <h2>Explore what India <em>grows and creates.</em></h2>
-          </div>
-          <p>Browse our export-focused product categories and explore the products available under each category.</p>
-        </div>
-
-        <div className="product-grid">
-          {productCategories.map((product, index) => (
-            <motion.article className="product-card" key={product.id} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-6}}>
-              <img src={product.image} alt={product.title} />
-              <div className="product-overlay" />
-              <span className="product-number">0{index + 1}</span>
-              <div className="category-tag"><Tag size={12}/> CATEGORY</div>
-              <div className="product-info">
-                <h3>{product.title}</h3>
-                <p>{product.description}</p>
-                <Link to={'/products?category='+product.id} aria-label={'Explore '+product.title}>
-                  Explore category <ArrowRight size={17}/>
-                </Link>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+export function ProductGrid(){const [selectedCategory,setSelectedCategory]=useState<ProductCategory|null>(null);return <section className="products-section" id="product-categories"><div className="section products-shell"><div className="section-head"><div><div className="section-label">OUR PRODUCT CATEGORIES</div><h2>Explore what India <em>grows and creates.</em></h2></div><p>Browse our export-focused product categories and tap a category to open its complete product catalogue.</p></div><div className="product-grid">{productCategories.map((product,index)=><motion.button type="button" className="product-card" key={product.id} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-6}} onClick={()=>setSelectedCategory(product)} aria-label={'Open '+product.title+' catalogue'}><img src={product.image} alt={product.title}/><div className="product-overlay"/><span className="product-number">0{index+1}</span><div className="category-tag"><Tag size={12}/> CATEGORY</div><div className="product-info"><h3>{product.title}</h3><p>{product.description}</p><span className="product-info__action">View product catalogue</span></div></motion.button>)}</div></div><ProductCatalogModal category={selectedCategory} onClose={()=>setSelectedCategory(null)}/></section>}
