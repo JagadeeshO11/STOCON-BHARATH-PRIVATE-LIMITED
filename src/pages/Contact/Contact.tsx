@@ -5,13 +5,7 @@ import './Contact.css'
 export function Contact() {
   return (
     <>
-      <section className="page-hero page-hero--contact">
-        <div>
-          <span className="section-label">CONTACT STOCON</span>
-          <h1>Let's begin the <em>conversation.</em></h1>
-          <p>Share your product or export requirement and connect with STOCON BHARATH PRIVATE LIMITED.</p>
-        </div>
-      </section>
+      <section className="page-hero page-hero--contact"><AnimatedPageHero label="CONTACT STOCON" prefix="Let's begin the" typed="conversation." description="Share your product or export requirement and connect with STOCON BHARATH PRIVATE LIMITED." /></section>
 
       <section className="contact-page">
         <div className="contact-page__intro">
@@ -36,3 +30,5 @@ export function Contact() {
     </>
   )
 }
+import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
+import { motion } from 'framer-motion'
