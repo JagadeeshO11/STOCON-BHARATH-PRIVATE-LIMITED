@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  background: #dcd5c8;
+  background: #D6E8E4;
 }
 
 .value-grid article {
@@ -23,7 +23,7 @@
 .value-grid p {
   font-size: 11px;
   line-height: 1.7;
-  color: #6b766e;
+  color: #52686B;
 }
 
 @media (max-width: 900px) {
