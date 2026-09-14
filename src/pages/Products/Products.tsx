@@ -1,102 +1,66 @@
-import { ArrowRight, CheckCircle2, Globe2, MessageCircle, PackageSearch, Tag } from 'lucide-react'
+import { ArrowLeft, ArrowRight, CheckCircle2, Globe2, MessageCircle, PackageSearch, Tag } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
 import { company } from '../../constants/company'
 import { productCategories } from '../../data/products'
 import './Products.css'
 
-const highlights=['Export-focused categories','Requirement-based discussions','Direct buyer communication']
-
 export function Products() {
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
   const requestedCategory = searchParams.get('category')
   const selected = productCategories.find((category) => category.id === requestedCategory) ?? productCategories[0]
 
-  useEffect(() => {
-    if (requestedCategory) {
-      requestAnimationFrame(() => document.getElementById('category-products')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
-    }
-  }, [requestedCategory])
-
-  const selectCategory = (id: string) => {
-    setSearchParams({ category: id })
-  }
-
   const whatsappMessage = encodeURIComponent(
-    'Hello STOCON, I am interested in ' + selected.title + '. Please share details and available products.'
+    'Hello STOCON, I am interested in ' + selected.title + '. Please share details and availability for the products I require.'
   )
 
   return (
     <>
       <section className="page-hero page-hero--products">
         <AnimatedPageHero
-          label="OUR PRODUCT CATEGORIES"
-          prefix="Explore six categories built for"
-          typed="global opportunities."
-          description="Choose a category, view the products under it, and start a direct requirement-focused discussion with STOCON."
+          label="OUR PRODUCTS"
+          prefix="Explore products under"
+          typed={selected.title + '.'}
+          description="Discover the available product range in your selected category and connect with STOCON for export requirements."
         />
       </section>
 
-      <section className="products-page">
-        <div className="products-page__intro">
-          <div>
-            <span className="section-label">EXPLORE THE CATALOGUE</span>
-            <h2>Six categories. <em>One global outlook.</em></h2>
-          </div>
-          <div className="products-page__note">
-            <PackageSearch size={25}/>
-            <p>Select a category to open its dedicated product panel. The products shown are the starting point for your export requirement discussion.</p>
-          </div>
+      <main className="products-page">
+        <div className="products-page__breadcrumb">
+          <Link to="/categories"><ArrowLeft size={16}/> All Categories</Link>
+          <span>/</span>
+          <strong>{selected.title}</strong>
         </div>
 
-        <div className="products-page__highlights">
-          {highlights.map((item,i)=><motion.div key={item} initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.08}}><CheckCircle2 size={17}/>{item}</motion.div>)}
-        </div>
-
-        <div className="products-page__category-grid" aria-label="Product categories">
-          {productCategories.map((category, index) => (
-            <button
-              type="button"
-              key={category.id}
-              className={selected.id === category.id ? 'products-page__category is-active' : 'products-page__category'}
-              onClick={() => selectCategory(category.id)}
-            >
-              <img src={category.image} alt="" />
-              <span className="products-page__category-shade" />
-              <span className="products-page__category-number">0{index + 1}</span>
-              <span className="products-page__category-copy">
-                <small>PRODUCT CATEGORY</small>
-                <strong>{category.title}</strong>
-              </span>
-            </button>
-          ))}
-        </div>
-
-        <section className="products-page__panel" id="category-products">
+        <section className="products-page__panel">
           <div className="products-page__panel-image">
             <img src={selected.image} alt={selected.title} />
+            <div className="products-page__image-label"><Tag size={14}/> {selected.title}</div>
           </div>
 
           <div className="products-page__panel-content">
-            <div className="products-page__panel-heading">
-              <span className="section-label"><Tag size={13}/> SELECTED CATEGORY</span>
-              <h2>{selected.title}</h2>
-              <p>{selected.description}</p>
+            <span className="section-label"><PackageSearch size={14}/> PRODUCT CATEGORY</span>
+            <h1>{selected.title}</h1>
+            <p className="products-page__description">{selected.description}</p>
+
+            <div className="products-page__stats">
+              <div><strong>{selected.products.length}</strong><span>Products listed</span></div>
+              <div><CheckCircle2 size={20}/><span>Export discussions</span></div>
             </div>
 
             <div className="products-page__product-list">
               {selected.products.map((product, index) => (
-                <motion.div
+                <motion.article
                   key={product}
                   initial={{opacity:0,y:10}}
                   animate={{opacity:1,y:0}}
-                  transition={{delay:index*.035}}
+                  transition={{delay:index*.04}}
                 >
                   <span>{String(index + 1).padStart(2, '0')}</span>
                   <strong>{product}</strong>
-                </motion.div>
+                  <CheckCircle2 size={16}/>
+                </motion.article>
               ))}
             </div>
 
@@ -106,33 +70,25 @@ export function Products() {
               target="_blank"
               rel="noreferrer"
             >
-              <MessageCircle size={19}/>
+              <MessageCircle size={20}/>
               Discuss {selected.title} on WhatsApp
               <ArrowRight size={17}/>
             </a>
           </div>
         </section>
 
-        <section className="products-page__guide">
+        <section className="products-page__requirement">
+          <Globe2 size={40}/>
           <div>
-            <span className="section-label">HOW TO START</span>
-            <h2>Found your category? <em>Let's talk requirements.</em></h2>
+            <span className="section-label">CUSTOM REQUIREMENT</span>
+            <h2>Looking for a specific product?</h2>
+            <p>Share your product requirement, quantity and destination market with our team for an export-focused discussion.</p>
           </div>
-          <div className="products-page__guide-steps">
-            <div><b>01</b><h3>Select a category</h3><p>Open the category that matches your sourcing requirement.</p></div>
-            <div><b>02</b><h3>Review products</h3><p>See the product range available under that category.</p></div>
-            <div><b>03</b><h3>Start the conversation</h3><p>Send your requirement directly to STOCON on WhatsApp.</p></div>
-          </div>
-        </section>
-
-        <div className="products-page__export">
-          <Globe2 size={38}/>
-          <div><span className="section-label">BUYER REQUIREMENTS</span><h3>Looking for something specific?</h3><p>Share your required product, quantity and destination market for a direct export-focused discussion.</p></div>
-          <a href={'https://wa.me/' + company.whatsappNumber + '?text=' + encodeURIComponent('Hello STOCON, I have a specific export product requirement.')} target="_blank" rel="noreferrer">
+          <a href={'https://wa.me/' + company.whatsappNumber + '?text=' + encodeURIComponent('Hello STOCON, I have a specific product export requirement.')} target="_blank" rel="noreferrer">
             Send requirement <ArrowRight size={18}/>
           </a>
-        </div>
-      </section>
+        </section>
+      </main>
     </>
   )
 }
