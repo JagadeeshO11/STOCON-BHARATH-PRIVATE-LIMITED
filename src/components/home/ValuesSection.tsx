@@ -1,4 +1,5 @@
 import { Globe2, Leaf, Package, Ship } from 'lucide-react'
+import { motion } from 'framer-motion'
 import './ValuesSection.css'
 
 const values = [
@@ -9,5 +10,5 @@ const values = [
 ]
 
 export function ValuesSection() {
-  return <section className="section values-section"><div className="section-label">04 / OUR DIRECTION</div><div className="value-grid">{values.map(({icon: Icon,title,text}) => <article key={title}><span><Icon /></span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+  return <section className="section values-section"><div className="section-label">04 / OUR DIRECTION</div><div className="value-grid">{values.map(({icon: Icon,title,text}) => <motion.article key={title} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-6}}><span><Icon /></span><h3>{title}</h3><p>{text}</p></motion.article>)}</div></section>
 }
