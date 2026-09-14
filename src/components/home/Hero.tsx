@@ -6,14 +6,14 @@ import './Hero.css'
 const logoUrl='https://res.cloudinary.com/dwmjz9csc/image/upload/v1789366884/3fe8f148-a5fe-4691-b999-b68f25e84bc2.png'
 
 const categories=[
- {name:'Spices',image:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=300&q=85',pos:'node-spices'},
- {name:'Pulses',image:'https://images.unsplash.com/photo-1515543904379-3d757afe72e8?auto=format&fit=crop&w=300&q=85',pos:'node-pulses'},
- {name:'Oil Seeds',image:'https://images.unsplash.com/photo-1595231776515-ddffb1f4eb73?auto=format&fit=crop&w=300&q=85',pos:'node-oil'},
- {name:'Value Added',image:'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=300&q=85',pos:'node-value'},
- {name:'Dehydrated',image:'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=300&q=85',pos:'node-dehydrated'},
- {name:'Herbs',image:'https://images.unsplash.com/photo-1515586000433-45406d8e6662?auto=format&fit=crop&w=300&q=85',pos:'node-herbs'},
- {name:'Nuts',image:'https://images.unsplash.com/photo-1599599810694-57a12cbe92a4?auto=format&fit=crop&w=300&q=85',pos:'node-nuts'},
- {name:'Grains',image:'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=85',pos:'node-grains'},
+ {name:'Spices',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375073/spices.jpg',pos:'node-spices'},
+ {name:'Pulses',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375118/grains.jpg',pos:'node-pulses'},
+ {name:'Oil Seeds',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375085/oil-seeds.jpg',pos:'node-oil'},
+ {name:'Value Added',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375090/value-added.jpg',pos:'node-value'},
+ {name:'Dehydrated',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375098/dehydrated.jpg',pos:'node-dehydrated'},
+ {name:'Herbs',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375104/herbs.jpg',pos:'node-herbs'},
+ {name:'Nuts',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375104/herbs.jpg',pos:'node-nuts'},
+ {name:'Grains',image:'https://res.cloudinary.com/znbhjevm/image/upload/v1789375118/grains.jpg',pos:'node-grains'},
 ]
 
 export function Hero(){
@@ -26,7 +26,7 @@ export function Hero(){
        </svg>
        <div className="brand-hub"><div className="brand-hub__ring"><img src={logoUrl} alt="STOCON Bharath Private Limited"/></div></div>
        {categories.map((item,index)=><motion.article key={item.name} className={'category-node '+item.pos} initial={{opacity:0,scale:.65}} animate={{opacity:1,scale:1}} transition={{delay:.15+index*.07,type:'spring',stiffness:110}}>
-         <img src={item.image} alt={item.name}/><span>{item.name}</span>
+         <img src={item.image} alt={item.name} loading="eager" onError={(e)=>{e.currentTarget.src='https://res.cloudinary.com/znbhjevm/image/upload/v1789375073/spices.jpg'}}/><span>{item.name}</span>
        </motion.article>)}
      </motion.div>
      <motion.div className="hero-copy" initial={{opacity:0,x:26}} animate={{opacity:1,x:0}} transition={{duration:.65,delay:.18}}>
