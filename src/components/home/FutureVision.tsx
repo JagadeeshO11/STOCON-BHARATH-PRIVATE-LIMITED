@@ -1,4 +1,5 @@
 import { Snowflake, Ship } from 'lucide-react'
+import { motion } from 'framer-motion'
 import './FutureVision.css'
 
 export function FutureVision() {
