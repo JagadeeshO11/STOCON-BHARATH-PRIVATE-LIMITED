@@ -132,3 +132,15 @@
   .contact-page__address{gap:14px}
   .contact-page__address p{font-size:13px}
 }
+
+/* Inquiry links + multiple product selection */
+.contact-page__quicklinks{display:grid;gap:9px;margin-top:26px}
+.contact-page__quicklinks a{display:grid;grid-template-columns:22px minmax(0,1fr) 18px;align-items:center;gap:10px;padding:13px 14px;border:1px solid var(--brand-border);border-radius:12px;background:#fff;color:var(--brand-deep);font-size:11px;font-weight:800;transition:.2s}
+.contact-page__quicklinks a:hover{transform:translateX(3px);border-color:var(--brand-aqua)}
+.contact-product-picker{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:end}
+.contact-product-add{height:48px;padding:0 15px;display:flex;align-items:center;gap:6px;border:0;border-radius:12px;background:var(--brand-deep);color:#fff;font-weight:800;cursor:pointer}
+.contact-product-add:disabled{opacity:.45;cursor:not-allowed}
+.contact-selected-products{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:7px;min-height:30px}
+.contact-selected-products>span{font-size:10px;color:#829192}
+.contact-selected-products button{display:flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid var(--brand-aqua);border-radius:999px;background:var(--brand-surface-aqua);color:var(--brand-deep);font-size:10px;font-weight:800;cursor:pointer}
+@media(max-width:600px){.contact-product-picker{grid-template-columns:minmax(0,1fr) 76px}.contact-product-add{padding:0 8px;font-size:9px}}
