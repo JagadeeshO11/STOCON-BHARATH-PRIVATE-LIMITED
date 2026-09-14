@@ -1,13 +1,16 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import type { ReactNode } from 'react'
+import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-interface PageTransitionProps {
-  children: ReactNode
-}
+interface PageTransitionProps { children: ReactNode }
 
 export function PageTransition({ children }: PageTransitionProps) {
   const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }, [location.pathname])
 
   return (
     <AnimatePresence mode="wait">
