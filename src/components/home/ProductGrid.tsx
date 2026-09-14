@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Tag } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { productCategories } from '../../data/products'
@@ -6,14 +6,14 @@ import './ProductGrid.css'
 
 export function ProductGrid() {
   return (
-    <section className="products-section">
+    <section className="products-section" id="product-categories">
       <div className="section products-shell">
         <div className="section-head">
           <div>
-            <div className="section-label">02 / WHAT WE EXPORT</div>
-            <h2>Products with a <em>passport to travel.</em></h2>
+            <div className="section-label">OUR PRODUCT CATEGORIES</div>
+            <h2>Explore what India <em>grows and creates.</em></h2>
           </div>
-          <p>Our product portfolio is designed around food and agricultural products, with flexibility to serve buyer requirements.</p>
+          <p>Browse our export-focused product categories and explore the products available under each category.</p>
         </div>
 
         <div className="product-grid">
@@ -22,18 +22,17 @@ export function ProductGrid() {
               <img src={product.image} alt={product.title} />
               <div className="product-overlay" />
               <span className="product-number">0{index + 1}</span>
+              <div className="category-tag"><Tag size={12}/> CATEGORY</div>
               <div className="product-info">
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
-                <Link to="/products" aria-label={'Explore ' + product.title}><ArrowRight size={19} /></Link>
+                <Link to={'/products#'+product.id} aria-label={'Explore '+product.title}>
+                  Explore category <ArrowRight size={17}/>
+                </Link>
               </div>
             </motion.article>
           ))}
         </div>
-
-        <Link className="products-page-link" to="/products">
-          View all product categories <ArrowRight size={18} />
-        </Link>
       </div>
     </section>
   )
