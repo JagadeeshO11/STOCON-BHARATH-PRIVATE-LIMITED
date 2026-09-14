@@ -16,3 +16,28 @@
 .catalog-modal__whatsapp{margin-top:12px;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:12px;background:var(--gradient-brand);color:var(--brand-deep);font-size:11px;font-weight:800;flex:none}
 @media(max-width:700px){.catalog-modal{padding:10px}.catalog-modal__panel{width:100%;max-height:92vh;border-radius:20px}.catalog-modal__hero{flex-basis:165px;padding:20px}.catalog-modal__hero>div{background:linear-gradient(180deg,rgba(4,30,35,.25),rgba(4,30,35,.94))}.catalog-modal__hero h2{font-size:29px}.catalog-modal__hero p{font-size:9px;line-height:1.4}.catalog-modal__content{padding:16px 12px}.catalog-modal__heading{margin-bottom:8px}.catalog-modal__heading h3{font-size:19px}.catalog-modal__products{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.catalog-modal__products>div{grid-template-columns:23px minmax(0,1fr) 14px;gap:5px;padding:7px 5px;min-height:36px}.catalog-modal__products span{width:23px;height:20px;font-size:7px}.catalog-modal__products strong{font-size:9.5px;line-height:1.2}.catalog-modal__products svg{width:13px;height:13px}.catalog-modal__whatsapp{margin-top:10px;padding:11px;font-size:10px}.catalog-modal__close{right:10px;top:10px;width:34px;height:34px}}
 @media(max-width:420px){.catalog-modal__hero{flex-basis:145px}.catalog-modal__content{padding:12px 9px}.catalog-modal__products{gap:4px}.catalog-modal__products>div{grid-template-columns:19px minmax(0,1fr) 12px;padding:6px 4px;gap:3px}.catalog-modal__products span{width:19px;font-size:6px}.catalog-modal__products strong{font-size:8.5px}.catalog-modal__products svg{width:11px;height:11px}}
+
+/* Product name visibility and equal card spacing */
+.catalog-modal__products>div{
+  grid-template-columns:28px minmax(0,1fr);
+  padding:10px 12px;
+}
+.catalog-modal__products>div svg{display:none}
+.catalog-modal__products strong{
+  width:100%;
+  overflow:visible;
+  text-overflow:clip;
+  white-space:normal;
+  font-size:12px;
+  color:var(--brand-deep);
+  font-weight:900;
+}
+.catalog-modal__products>div:hover strong{color:var(--brand-blue)}
+@media(max-width:700px){
+  .catalog-modal__products>div{grid-template-columns:22px minmax(0,1fr);padding:8px 7px}
+  .catalog-modal__products strong{font-size:10px}
+}
+@media(max-width:420px){
+  .catalog-modal__products>div{grid-template-columns:19px minmax(0,1fr);padding:7px 5px}
+  .catalog-modal__products strong{font-size:9px}
+}
