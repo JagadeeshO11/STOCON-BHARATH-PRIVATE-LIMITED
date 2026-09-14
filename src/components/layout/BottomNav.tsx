@@ -1,8 +1,8 @@
-import { FaHouse, FaCircleInfo, FaBoxOpen, FaShip, FaShieldHalved, FaWhatsapp } from 'react-icons/fa6'
+import { FaHouse, FaCircleInfo, FaShip, FaShieldHalved, FaWhatsapp } from 'react-icons/fa6'
 import { NavLink } from 'react-router-dom'
 import { company } from '../../constants/company'
 import './BottomNav.css'
 
-const items=[['/','Home',FaHouse],['/about','About',FaCircleInfo],['/products','Products',FaBoxOpen],['/export-services','Export',FaShip],['/quality','Quality',FaShieldHalved]] as const
+const items=[['/','Home',FaHouse],['/about','About',FaCircleInfo],['/export-services','Export',FaShip],['/quality','Quality',FaShieldHalved]] as const
 
 export function BottomNav(){return <div className="bottom-bar"><nav className="bottom-nav" aria-label="Quick navigation">{items.map(([path,label,Icon])=><NavLink key={path} to={path} end={path==='/' }><Icon/><span>{label}</span></NavLink>)}</nav><a className="bottom-whatsapp" href={'https://wa.me/'+company.whatsappNumber} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><FaWhatsapp/></a></div>}
