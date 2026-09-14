@@ -12,13 +12,13 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  color: var(--leaf);
+  color: var(--brand-teal);
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   letter-spacing: 0.15em;
 }
 
-.eyebrow span { width: 30px; height: 1px; background: var(--gold); }
+.eyebrow span { width: 30px; height: 1px; background: var(--brand-blue); }
 
 .hero h1 {
   font-size: clamp(45px, 6vw, 92px);
@@ -26,7 +26,7 @@
   letter-spacing: -0.055em;
   margin: 22px 0;
   font-weight: 800;
-  color: var(--green);
+  color: var(--brand-deep);
 }
 
 .hero h1 em {
@@ -53,7 +53,7 @@
   align-items: center;
   gap: 9px;
   border: 0;
-  background: linear-gradient(135deg, var(--green), var(--blue));
+  background: var(--gradient-brand);
   color: #fff;
   padding: 16px 22px;
   font-size: 12px;
@@ -63,7 +63,7 @@
 .text-btn {
   border: 0;
   background: none;
-  color: var(--green);
+  color: var(--brand-deep);
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -72,9 +72,9 @@
 }
 
 .hero-proof { display: flex; gap: 34px; margin-top: 55px; }
-.hero-proof > div { display: flex; gap: 10px; align-items: center; color: var(--leaf); }
+.hero-proof > div { display: flex; gap: 10px; align-items: center; color: var(--brand-teal); }
 .hero-proof span { display: grid; }
-.hero-proof strong { font-size: 12px; color: var(--green); }
+.hero-proof strong { font-size: 12px; color: var(--brand-deep); }
 .hero-proof small { font-size: 10px; color: #71888A; }
 
 .hero-visual { min-height: 570px; position: relative; }
@@ -83,10 +83,10 @@
   position: absolute;
   inset: 25px 20px 0 80px;
   background:
-    linear-gradient(180deg, rgba(23, 63, 70, 0.05), rgba(23, 63, 70, 0.35)),
+    linear-gradient(180deg, rgba(23, 63, 70, 0.05), rgba(23, 63, 70, 0.52)),
     url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=90') center / cover;
   border-radius: 240px 240px 16px 16px;
-  box-shadow: 30px 30px 0 var(--sand);
+  box-shadow: 30px 30px 0 var(--brand-surface-aqua);
 }
 
 .hero-orbit {
@@ -107,7 +107,7 @@
   gap: 9px;
   align-items: center;
   box-shadow: 0 15px 40px rgba(116, 158, 228, 0.16);
-  color: var(--leaf);
+  color: var(--brand-teal);
 }
 
 .floating-card span { display: grid; font-size: 11px; font-weight: 800; }
