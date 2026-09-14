@@ -1,24 +1,20 @@
 import './AnnouncementTicker.css'
 
-const categories = [
-  'FOOD PRODUCTS',
-  'FRESH FRUITS',
-  'VEGETABLES',
-  'INDIAN SPICES',
-  'GLOBAL EXPORT',
-]
+const categories = ['FOOD PRODUCTS','FRESH FRUITS','VEGETABLES','INDIAN SPICES','GLOBAL EXPORT']
 
-export function AnnouncementTicker() {
-  return (
-    <div className="ticker" aria-label="Product categories">
-      <div className="ticker__track">
-        {categories.map((category) => (
-          <span key={category}>{category} <i>✦</i></span>
-        ))}
-        {categories.map((category) => (
-          <span key={'repeat-' + category} aria-hidden="true">{category} <i>✦</i></span>
-        ))}
-      </div>
-    </div>
-  )
+function TickerGroup({hidden=false}:{hidden?:boolean}){
+ return <div className="ticker__group" aria-hidden={hidden}>
+  {categories.map((category)=><span key={category}>{category}<i>✦</i></span>)}
+ </div>
+}
+
+export function AnnouncementTicker(){
+ return <div className="ticker" aria-label="Product categories">
+  <div className="ticker__viewport">
+   <div className="ticker__track">
+    <TickerGroup/>
+    <TickerGroup hidden/>
+   </div>
+  </div>
+ </div>
 }
