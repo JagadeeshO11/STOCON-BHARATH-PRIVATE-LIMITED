@@ -15,11 +15,11 @@ export function Contact() {
         </div>
 
         <div className="contact-page__details">
-          <a href={'mailto:' + company.email}><Mail size={22} /><div><small>EMAIL</small><strong>{company.email}</strong></div><ArrowRight size={18}/></a>
+          <motion.a initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{x:6}} href={'mailto:' + company.email}><Mail size={22} /><div><small>EMAIL</small><strong>{company.email}</strong></div><ArrowRight size={18}/></motion.a>
           {company.phoneNumbers.map((person) => (
-            <a key={person.number} href={'tel:+91' + person.number}><Phone size={22} /><div><small>{person.name.toUpperCase()}</small><strong>+91 {person.number}</strong></div><ArrowRight size={18}/></a>
+            <motion.a key={person.number} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{x:6}} href={'tel:+91' + person.number}><Phone size={22} /><div><small>{person.name.toUpperCase()}</small><strong>+91 {person.number}</strong></div><ArrowRight size={18}/></motion.a>
           ))}
-          <a href={'https://wa.me/' + company.whatsappNumber} target="_blank" rel="noreferrer"><MessageCircle size={22} /><div><small>WHATSAPP</small><strong>Start a business conversation</strong></div><ArrowRight size={18}/></a>
+          <motion.a initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{x:6}} href={'https://wa.me/' + company.whatsappNumber} target="_blank" rel="noreferrer"><MessageCircle size={22} /><div><small>WHATSAPP</small><strong>Start a business conversation</strong></div><ArrowRight size={18}/></motion.a>
         </div>
 
         <div className="contact-page__address">
