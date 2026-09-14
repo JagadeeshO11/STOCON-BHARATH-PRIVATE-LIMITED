@@ -27,3 +27,5 @@ h2 em{color:var(--brand-blue)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--brand-aqua);outline-offset:3px}
 .page-hero{background-color:var(--brand-deep)}
 .nav-cta,.site-footer__cta,.hero-cta,.primary-button{background:var(--gradient-brand)!important;color:var(--brand-deep)!important}
+
+.typewriter-caret{display:inline-block;margin-left:3px;color:var(--brand-cyan);animation:typewriterBlink .8s steps(2,end) infinite}@keyframes typewriterBlink{50%{opacity:0}}
