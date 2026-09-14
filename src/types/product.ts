@@ -3,4 +3,5 @@ export interface ProductCategory {
   title: string
   description: string
   image: string
+  products: string[]
 }
