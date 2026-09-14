@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { productCategories } from '../../data/products'
 import './ProductGrid.css'
@@ -17,7 +18,7 @@ export function ProductGrid() {
 
         <div className="product-grid">
           {productCategories.map((product, index) => (
-            <article className="product-card" key={product.id}>
+            <motion.article className="product-card" key={product.id} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-6}}>
               <img src={product.image} alt={product.title} />
               <div className="product-overlay" />
               <span className="product-number">0{index + 1}</span>
@@ -26,7 +27,7 @@ export function ProductGrid() {
                 <p>{product.description}</p>
                 <Link to="/products" aria-label={'Explore ' + product.title}><ArrowRight size={19} /></Link>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
 
