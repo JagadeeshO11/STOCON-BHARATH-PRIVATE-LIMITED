@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: stocon-bharath-private-limited
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
