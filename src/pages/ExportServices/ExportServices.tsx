@@ -1,5 +1,7 @@
 import { ArrowRight, ClipboardCheck, Globe2, PackageCheck, SearchCheck } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
 import { companyContent } from '../../data/companyContent'
 import './ExportServices.css'
 
@@ -20,6 +22,3 @@ export function ExportServices(){
   </section>
  </>
 }
-
-import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
-import { motion } from 'framer-motion'
