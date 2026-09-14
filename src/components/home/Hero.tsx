@@ -20,9 +20,9 @@ export function Hero(){
    <div className="hero-inner">
      <motion.div className="hero-network" initial={{opacity:0,scale:.96}} animate={{opacity:1,scale:1}} transition={{duration:.75}}>
        <svg className="network-lines" viewBox="0 0 760 620" aria-hidden="true">
-         <path d="M380 310L380 92M380 310L585 160M380 310L650 310M380 310L560 475M380 310L380 535M380 310L105 300" />
+         <path d="M380 310L380 70M380 310L588 190M380 310L588 430M380 310L380 550M380 310L172 430M380 310L172 190" />
        </svg>
-       <div className="brand-hub"><div className="brand-hub__ring"><img src={logoUrl} alt="STOCON Bharath Private Limited"/></div></div>
+       <div className="brand-hub"><div className="brand-hub__ring"><img className="brand-hub__logo" src={logoUrl.replace('/upload/','/upload/e_make_transparent:12/')} alt="STOCON Bharath Private Limited"/></div></div>
        {categories.map((item,index)=><motion.article key={item.name} className={'category-node '+item.pos} initial={{opacity:0,scale:.65}} animate={{opacity:1,scale:1}} transition={{delay:.15+index*.07,type:'spring',stiffness:110}}>
          <img src={item.image} alt={item.name} loading="eager" onError={(e)=>{e.currentTarget.src='https://res.cloudinary.com/znbhjevm/image/upload/v1789375073/spices.jpg'}}/><span>{item.name}</span>
        </motion.article>)}
