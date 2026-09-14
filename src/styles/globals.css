@@ -17,3 +17,13 @@ h2 em{font-family:'Playfair Display',serif;font-weight:500;color:var(--blue)}
 .page-hero .section-label{color:var(--mint)}
 @media(max-width:900px){.section{padding:75px 22px}}
 @media(max-width:700px){.page-hero{min-height:360px;padding:70px 22px}}
+
+/* Unified STOCON logo-driven visual system */
+body{background:var(--brand-surface);color:var(--brand-ink)}
+.section-label{color:var(--brand-teal)}
+h1,h2,h3{color:var(--brand-ink)}
+h2 em{color:var(--brand-blue)}
+::selection{background:var(--brand-aqua);color:var(--brand-deep)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--brand-aqua);outline-offset:3px}
+.page-hero{background-color:var(--brand-deep)}
+.nav-cta,.site-footer__cta,.hero-cta,.primary-button{background:var(--gradient-brand)!important;color:var(--brand-deep)!important}
