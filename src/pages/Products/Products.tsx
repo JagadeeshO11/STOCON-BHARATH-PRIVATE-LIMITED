@@ -7,13 +7,7 @@ import './Products.css'
 export function Products() {
   return (
     <>
-      <section className="page-hero page-hero--products">
-        <div>
-          <span className="section-label">OUR PRODUCT CATEGORIES</span>
-          <h1>Food and natural products for <em>export opportunities.</em></h1>
-          <p>STOCON’s stated business focus covers food products, fruits, vegetables and spices of different types.</p>
-        </div>
-      </section>
+      <section className="page-hero page-hero--products"><AnimatedPageHero label="OUR PRODUCT CATEGORIES" prefix="Food and natural products for" typed="export opportunities." description="STOCON’s stated business focus covers food products, fruits, vegetables and spices of different types." /></section>
 
       <section className="page-section products-page">
         <div className="products-page__intro">
@@ -28,7 +22,7 @@ export function Products() {
           {productCategories.map((product, index) => {
             const detail = companyContent.productCategories[index]
             return (
-              <article key={product.id}>
+              <motion.article key={product.id} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-7}} transition={{duration:.35}}>
                 <div className="products-page__image">
                   <img src={product.image} alt={product.title} loading="lazy" />
                   <span>0{index + 1}</span>
@@ -38,7 +32,7 @@ export function Products() {
                   <p>{detail.description}</p>
                   <Link to="/contact">Discuss this category <ArrowRight size={17} /></Link>
                 </div>
-              </article>
+              </motion.article>
             )
           })}
         </div>
@@ -52,3 +46,6 @@ export function Products() {
     </>
   )
 }
+
+import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
+import { motion } from 'framer-motion'
