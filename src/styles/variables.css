@@ -1,35 +1,12 @@
 :root{
-  /* STOCON brand palette derived from the official logo */
-  --brand-mint:#82EFA6;
-  --brand-aqua:#85D1BD;
-  --brand-cyan:#80B9CE;
-  --brand-blue:#749EE4;
-
-  --brand-teal:#2E5F5B;
-  --brand-deep:#173F46;
-  --brand-ink:#18363A;
-
-  --brand-surface:#F6FDFC;
-  --brand-surface-soft:#EEF8F4;
-  --brand-surface-aqua:#E7F3EE;
-  --brand-border:#CFE3DE;
-  --brand-text-muted:#52686B;
-
-  /* Backward-compatible semantic tokens used throughout the application */
-  --green:var(--brand-teal);
-  --deep:var(--brand-deep);
-  --leaf:#5E9F93;
-  --mint:var(--brand-mint);
-  --aqua:var(--brand-aqua);
-  --cyan:var(--brand-cyan);
-  --blue:var(--brand-blue);
-  --cream:var(--brand-surface);
-  --sand:var(--brand-surface-aqua);
-  --gold:var(--brand-cyan);
-  --ink:var(--brand-ink);
-
-  --gradient-brand:linear-gradient(135deg,var(--brand-mint) 0%,var(--brand-aqua) 35%,var(--brand-cyan) 68%,var(--brand-blue) 100%);
+  --brand-mint:#82EFA6;--brand-aqua:#85D1BD;--brand-cyan:#80B9CE;--brand-blue:#749EE4;
+  --brand-teal:#2E5F5B;--brand-deep:#173F46;--brand-ink:#18363A;
+  --brand-surface:#F6FDFC;--brand-surface-soft:#EEF8F4;--brand-surface-aqua:#E7F3EE;--brand-border:#CFE3DE;--brand-text-muted:#52686B;
+  --green:var(--brand-teal);--deep:var(--brand-deep);--leaf:#5E9F93;--mint:var(--brand-mint);--aqua:var(--brand-aqua);--cyan:var(--brand-cyan);--blue:var(--brand-blue);--cream:var(--brand-surface);--sand:var(--brand-surface-aqua);--gold:var(--brand-cyan);--ink:var(--brand-ink);
+  --gradient-brand:linear-gradient(135deg,var(--brand-mint),var(--brand-aqua) 35%,var(--brand-cyan) 68%,var(--brand-blue));
   --gradient-deep:linear-gradient(135deg,var(--brand-deep),var(--brand-teal));
-  --container-padding:clamp(22px,7vw,112px);
-  --section-space:clamp(72px,9vw,130px);
+  --container-padding:clamp(20px,5vw,88px);
+  --section-space:clamp(64px,8vw,112px);
+  --card-padding:clamp(22px,3vw,34px);
+  --content-width:1240px;
 }
