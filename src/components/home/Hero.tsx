@@ -55,7 +55,14 @@ export function Hero() {
 
         <motion.div className="hero-copy" initial={{ opacity: 0, x: 26 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.65, delay: 0.18 }}>
           <div className="eyebrow"><span />INDIA · GLOBAL EXPORT PARTNER</div>
-          <h1>Sourcing the Best.<br />Supplying a<br /><em>Healthier Tomorrow.</em></h1>
+          <h1 className="hero-title">
+            <span>Sourcing the Best.</span>
+            <span>Supplying a</span>
+            <em className="hero-title__accent">
+              <span>Healthier</span>
+              <span>Tomorrow.</span>
+            </em>
+          </h1>
           <p>Quality Indian agricultural products sourced with care and supplied to customers and partners across international markets.</p>
           <div className="hero-actions">
             <Link className="primary-btn" to="/products">Explore Our Products <ArrowRight size={18} /></Link>
@@ -69,6 +76,65 @@ export function Hero() {
         <div><ShieldCheck /><span><strong>Trusted Partner</strong><small>Reliable export solutions</small></span></div>
         <div><Sprout /><span><strong>Sustainable Growth</strong><small>For a better tomorrow</small></span></div>
       </div>
+
+      <style>{`
+        .hero .hero-copy .hero-title {
+          width: 100%;
+          max-width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+          text-wrap: balance;
+        }
+        .hero .hero-copy .hero-title > span {
+          display: block;
+          max-width: 100%;
+        }
+        .hero .hero-copy .hero-title__accent {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+          white-space: normal !important;
+          overflow: visible !important;
+          overflow-wrap: normal;
+          word-break: normal;
+          line-height: 1.06;
+          font-size: clamp(34px, 4.2vw, 64px);
+        }
+        .hero .hero-copy .hero-title__accent > span {
+          display: block;
+          max-width: 100%;
+        }
+        @media (max-width: 1180px) {
+          .hero .hero-copy {
+            width: min(100%, 640px);
+          }
+        }
+        @media (max-width: 760px) {
+          .hero .hero-copy {
+            width: min(100%, 560px);
+          }
+          .hero .hero-copy .hero-title {
+            font-size: clamp(34px, 10vw, 52px);
+            line-height: 1.06;
+            letter-spacing: -0.04em;
+          }
+          .hero .hero-copy .hero-title__accent {
+            font-size: clamp(24px, 7.2vw, 40px);
+            line-height: 1.12;
+            letter-spacing: -0.025em;
+          }
+        }
+        @media (max-width: 420px) {
+          .hero .hero-copy .hero-title {
+            font-size: clamp(30px, 9.4vw, 44px);
+          }
+          .hero .hero-copy .hero-title__accent {
+            font-size: clamp(21px, 6.8vw, 31px);
+          }
+        }
+      `}</style>
     </section>
   )
 }
