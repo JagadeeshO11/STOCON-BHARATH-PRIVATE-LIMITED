@@ -1,6 +1,6 @@
-import { ArrowLeft, ArrowRight, CheckCircle2, Globe2, MessageCircle, PackageSearch, Tag } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Globe2, MessageCircle, PackageSearch, Tag } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Link, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
 import { company } from '../../constants/company'
 import { productCategories } from '../../data/products'
@@ -28,9 +28,9 @@ export function Products() {
 
       <main className="products-page">
         <div className="products-page__breadcrumb">
-          <Link to="/categories"><ArrowLeft size={16}/> All Categories</Link>
+          <strong>Products</strong>
           <span>/</span>
-          <strong>{selected.title}</strong>
+          <span>{selected.title}</span>
         </div>
 
         <section className="products-page__panel">
