@@ -1,13 +1,11 @@
-import { FaHouse, FaCircleInfo, FaLayerGroup, FaShip, FaShieldHalved, FaAddressBook } from 'react-icons/fa6'
+import { FaHouse, FaCircleInfo, FaBoxOpen, FaAddressBook } from 'react-icons/fa6'
 import { NavLink } from 'react-router-dom'
 import './BottomNav.css'
 
 const items = [
   ['/', 'Home', FaHouse],
   ['/about', 'About', FaCircleInfo],
-  ['/categories', 'Categories', FaLayerGroup],
-  ['/export-services', 'Export', FaShip],
-  ['/quality', 'Quality', FaShieldHalved],
+  ['/products', 'Products', FaBoxOpen],
   ['/contact', 'Contact', FaAddressBook],
 ] as const
 
