@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { PageTransition } from '../components/layout/PageTransition'
 import { About } from '../pages/About/About'
-import { Products } from '../pages/Products/Products'
+import { Categories as Products } from '../pages/Categories/Categories'
 import { HomePage } from '../pages/Home/HomePage'
 import { Contact } from '../pages/Contact/Contact'
 
