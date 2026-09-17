@@ -8,8 +8,8 @@ const logoUrl = 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789366884/3
 export function Header() {
   return <header className="header">
     <Link className="brand" to="/" aria-label="Go to STOCON home">
-      <img className="brand-logo" src={logoUrl} alt="STOCON BHARATH logo" />
-      <span><strong>STOCON</strong><small>BHARATH PRIVATE LIMITED</small></span>
+      <img className="brand-logo" src={logoUrl} alt="STOCON BHARAT logo" />
+      <span><strong>STOCON</strong><small>BHARAT PVT LIMITED</small></span>
     </Link>
     <nav className="desktop-nav" aria-label="Primary navigation">
       {navigationItems.map(({label,path})=><NavLink key={path} to={path} className={({isActive})=>isActive?'active':''}>{label}</NavLink>)}
