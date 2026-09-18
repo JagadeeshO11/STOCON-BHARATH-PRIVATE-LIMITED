@@ -2,40 +2,57 @@ export const companyContent = {
   overview: {
     established: 'August 2025',
     base: 'Tirupati, Andhra Pradesh, India',
-    primaryFocus: 'Export business of food products, fruits, vegetables and spices.',
-    domesticSales: 'Domestic sales may be considered according to customer requirements.',
-    futureDirection: 'Future plans include exploring seafood exports in frozen condition.',
+    primaryFocus: 'Export-focused sourcing and supply of food products, fresh fruits, vegetables and spices for domestic and international requirements.',
+    domesticSales: 'Domestic supply can also be considered according to buyer requirements, quantities and product availability.',
+    futureDirection: 'The business is focused on building a wider export portfolio and exploring additional food and agri-product opportunities.',
   },
   productCategories: [
     {
-      title: 'Food Products',
-      description: 'A broad food-product category considered according to customer requirements and export opportunities.',
+      title: 'Fresh Fruits',
+      description: 'Export-oriented fresh fruits sourced with attention to freshness, grading, packing and market requirements.',
     },
     {
-      title: 'Fruits',
-      description: 'Fruit products form one of STOCON’s core business categories for export-focused discussions.',
+      title: 'Fresh Vegetables',
+      description: 'Fresh Indian vegetables selected for quality, consistency and dependable supply.',
     },
     {
-      title: 'Vegetables',
-      description: 'Vegetables are part of STOCON’s core natural-product portfolio for customer and export requirements.',
+      title: 'Food & Non-Perishable Products',
+      description: 'Shelf-stable food products suitable for bulk and export requirements.',
     },
     {
-      title: 'Spices',
-      description: 'Spices of different types are included in STOCON’s export-focused business direction.',
+      title: 'Imported Fruits',
+      description: 'Selected premium imported fruits for buyers seeking wider product availability in the Indian market.',
     },
+    {
+      title: 'Spices & Agri Products',
+      description: 'Indian spices and agricultural products available for requirement-based sourcing and export discussions.',
+    },
+  ],
+  services: [
+    'Direct and requirement-based product sourcing',
+    'Quality grading and inspection',
+    'Export-standard packaging',
+    'Cold-chain and temperature-controlled handling where required',
+    'Air and sea freight coordination',
+    'Customs and export documentation support',
+    'Transportation and shipment coordination',
   ],
   businessPrinciples: [
     {
-      title: 'Export comes first',
-      text: 'The company’s primary business priority is export.',
+      title: 'Export first',
+      text: 'International trade and export opportunities remain at the center of the business direction.',
     },
     {
-      title: 'Customer requirements matter',
-      text: 'Domestic sales and product discussions can be considered according to customer requirements.',
+      title: 'Requirement focused',
+      text: 'Product selection, quantity and supply discussions begin with the buyer requirement and destination market.',
     },
     {
-      title: 'A growing portfolio',
-      text: 'The current focus is food products, fruits, vegetables and spices, with frozen seafood identified as a future direction.',
+      title: 'Quality at every stage',
+      text: 'Sourcing, grading, packing and dispatch are treated as connected parts of a dependable supply process.',
+    },
+    {
+      title: 'Clear communication',
+      text: 'Straightforward product information, documentation and shipment coordination help create stronger business relationships.',
     },
   ],
 } as const
