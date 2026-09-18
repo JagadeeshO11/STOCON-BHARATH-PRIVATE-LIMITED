@@ -7,12 +7,12 @@ const logoUrl = 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789366884/3
 const heroVideo = 'https://res.cloudinary.com/dwmjz9csc/video/upload/v1789390588/now_genrate_the_video_tqrqom.mp4'
 
 const categories = [
-  { name: 'Spices & Herbs', slug: 'spices-herbs', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-spices' },
-  { name: 'Grains & Pulses', slug: 'grains-pulses', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376279/hero-grains.webp', pos: 'node-grains' },
-  { name: 'Oil Seeds', slug: 'oil-seeds', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376292/hero-oil-seeds.jpg', pos: 'node-oil' },
-  { name: 'Fruits & Vegetables', slug: 'fruits-vegetables', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389015/hero-fresh-fruits-vegetables.png', pos: 'node-fruits' },
-  { name: 'Dehydrated Products', slug: 'dehydrated-products', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389022/hero-dehydrated-products.jpg', pos: 'node-dehydrated' },
-  { name: 'Processed Foods', slug: 'processed-foods', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389031/hero-processed-foods.jpg', pos: 'node-processed' },
+  { name: 'Fresh Vegetables', slug: 'fresh-vegetables', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-spices' },
+  { name: 'Fresh Fruits', slug: 'fresh-fruits', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376279/hero-grains.webp', pos: 'node-grains' },
+  { name: 'Food & Non-Perishable', slug: 'non-perishable', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376292/hero-oil-seeds.jpg', pos: 'node-oil' },
+  { name: 'Imported Fruits', slug: 'imported-fruits', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389015/hero-fresh-fruits-vegetables.png', pos: 'node-fruits' },
+  { name: 'Spices & Herbs', slug: 'spices-herbs', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389022/hero-dehydrated-products.jpg', pos: 'node-dehydrated' },
+  { name: 'Grains & Pulses', slug: 'grains-pulses', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389031/hero-processed-foods.jpg', pos: 'node-processed' },
 ]
 
 export function Hero() {
@@ -56,14 +56,14 @@ export function Hero() {
         <motion.div className="hero-copy" initial={{ opacity: 0, x: 26 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.65, delay: 0.18 }}>
           <div className="eyebrow"><span />INDIA · GLOBAL EXPORT PARTNER</div>
           <h1 className="hero-title">
-            <span>Sourcing the Best.</span>
-            <span>Supplying a</span>
+            <span>Fresh Indian Products.</span>
+            <span>Supplying to</span>
             <em className="hero-title__accent">
-              <span>Healthier</span>
-              <span>Tomorrow.</span>
+              <span>Global</span>
+              <span>Markets.</span>
             </em>
           </h1>
-          <p>Quality Indian agricultural products sourced with care and supplied to customers and partners across international markets.</p>
+          <p>Export-focused sourcing of fresh fruits, vegetables and food products, prepared around buyer requirements and destination markets.</p>
           <div className="hero-actions">
             <Link className="primary-btn" to="/products">Explore Our Products <ArrowRight size={18} /></Link>
           </div>
@@ -71,10 +71,10 @@ export function Hero() {
       </div>
 
       <div className="hero-features">
-        <div><Globe2 /><span><strong>Global Reach</strong><small>Exporting to global markets</small></span></div>
-        <div><Leaf /><span><strong>Pure & Natural</strong><small>Premium quality products</small></span></div>
-        <div><ShieldCheck /><span><strong>Trusted Partner</strong><small>Reliable export solutions</small></span></div>
-        <div><Sprout /><span><strong>Sustainable Growth</strong><small>For a better tomorrow</small></span></div>
+        <div><Globe2 /><span><strong>Global Markets</strong><small>Export-focused supply</small></span></div>
+        <div><Leaf /><span><strong>Quality Focus</strong><small>Freshness & grading</small></span></div>
+        <div><ShieldCheck /><span><strong>Reliable Supply</strong><small>Clear coordination</small></span></div>
+        <div><Sprout /><span><strong>Export Ready</strong><small>Packaging & logistics</small></span></div>
       </div>
 
       <style>{`
