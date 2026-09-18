@@ -6,6 +6,17 @@
   --heading-font:'Poppins',sans-serif;
   --body-font:'Poppins',sans-serif;
   --ui-font:'Roboto',sans-serif;
+  --fs-body:15px;
+  --fs-h1:40px;
+  --fs-h2:30px;
+  --fs-h3:28px;
+  --fs-h4:18px;
+  --fs-h5:18px;
+  --fs-h6:16px;
+  --fs-input:16px;
+  --fs-tagline:25px;
+  --fs-site-title:35px;
+  --fs-shadow:100px;
   --gradient-brand:linear-gradient(135deg,var(--brand-mint),var(--brand-aqua) 35%,var(--brand-cyan) 68%,var(--brand-blue));
   --gradient-deep:linear-gradient(135deg,var(--brand-deep),var(--brand-teal));
   --container-padding:clamp(20px,5vw,88px);

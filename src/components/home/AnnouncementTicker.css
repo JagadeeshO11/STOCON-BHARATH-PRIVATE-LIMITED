@@ -2,8 +2,8 @@
 .ticker{width:100%;overflow:hidden;border-radius:12px;background:linear-gradient(90deg,var(--brand-deep),var(--brand-teal));color:#eaf7f4;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 26px rgba(18,63,70,.08)}
 .ticker__track{display:flex;width:max-content;will-change:transform;animation:ticker-scroll 26s linear infinite}
 .ticker__group{display:flex;flex:none;min-width:max-content}
-.ticker__item{display:inline-flex;align-items:center;gap:22px;flex:none;padding:15px 22px;font-family:'DM Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.12em;white-space:nowrap}
-.ticker__item b{color:var(--brand-aqua);font-size:12px}
+.ticker__item{display:inline-flex;align-items:center;gap:22px;flex:none;padding:15px 22px;font-family:'DM Mono',monospace;font-size:var(--fs-body);font-weight:700;letter-spacing:.12em;white-space:nowrap}
+.ticker__item b{color:var(--brand-aqua);font-size:var(--fs-body)}
 @keyframes ticker-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 .ticker:hover .ticker__track{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.ticker__track{animation:none}}

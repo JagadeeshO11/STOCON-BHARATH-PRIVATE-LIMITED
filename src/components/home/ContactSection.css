@@ -41,7 +41,7 @@
 .contact-section p {
   max-width: 560px;
   color: #b8c5bd;
-  font-size: 14px;
+  font-size: var(--fs-body);
   line-height: 1.85;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .contact-card strong {
-  font-size: 13px;
+  font-size: var(--fs-body);
 }
 
 .contact-card a > svg:last-child {
@@ -95,7 +95,7 @@
   align-items: center;
   gap: 9px;
   color: #aebdb3;
-  font-size: 11px;
+  font-size: var(--fs-body);
 }
 
 @media (max-width: 900px) {

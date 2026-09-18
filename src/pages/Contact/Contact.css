@@ -20,7 +20,7 @@
 }
 .contact-page__intro h2{font-size:clamp(36px,4.4vw,62px);line-height:1.04;letter-spacing:-.045em;margin:16px 0 18px;color:var(--brand-deep)}
 .contact-page__intro h2 em{font-family:var(--body-font);font-weight:500;color:var(--brand-blue)}
-.contact-page__intro p{margin:0;max-width:420px;color:var(--brand-text-muted);font-size:14px;line-height:1.8;font-weight:700}
+.contact-page__intro p{margin:0;max-width:420px;color:var(--brand-text-muted);font-size:var(--fs-body);line-height:1.8;font-weight:700}
 
 .contact-enquiry{
   padding:clamp(26px,3.4vw,42px);
@@ -45,7 +45,7 @@
   min-height:48px;
   padding:13px 14px;
   appearance:auto;
-  font:500 13px var(--body-font);
+  font:500 var(--fs-input) var(--body-font);
   letter-spacing:0;
   color:var(--brand-deep);
   background:#fff;
@@ -74,7 +74,7 @@
   cursor:pointer;
   background:var(--gradient-brand);
   color:var(--brand-deep);
-  font:800 12px var(--body-font);
+  font:800 var(--fs-body) var(--body-font);
   transition:transform .2s ease,box-shadow .2s ease;
 }
 .contact-enquiry__submit:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(8,44,49,.16)}
@@ -99,7 +99,7 @@
 .contact-page__details a>svg:first-child{color:var(--brand-blue)}
 .contact-page__details div{min-width:0;display:grid;gap:5px}
 .contact-page__details small{color:#71888a;font:10px var(--body-font);letter-spacing:.06em}
-.contact-page__details strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
+.contact-page__details strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--fs-body)}
 
 .contact-page__address{
   grid-column:1/-1;
@@ -113,7 +113,7 @@
 }
 .contact-page__address>svg{flex:none;color:var(--brand-mint)}
 .contact-page__address .section-label{color:var(--brand-aqua)}
-.contact-page__address p{margin:12px 0 0;max-width:900px;color:#eaf7f4;font-size:15px;line-height:1.8;font-weight:700}
+.contact-page__address p{margin:12px 0 0;max-width:900px;color:#eaf7f4;font-size:var(--fs-body);line-height:1.8;font-weight:700}
 
 @media(max-width:900px){
   .contact-page{grid-template-columns:1fr;padding-top:70px;padding-bottom:70px}
@@ -130,7 +130,7 @@
   .contact-page__details a{grid-template-columns:28px minmax(0,1fr) 16px;gap:11px;padding:18px 0}
   .contact-page__details strong{font-size:12px}
   .contact-page__address{gap:14px}
-  .contact-page__address p{font-size:13px}
+  .contact-page__address p{font-size:var(--fs-body)}
 }
 
 /* Inquiry links + multiple product selection */
