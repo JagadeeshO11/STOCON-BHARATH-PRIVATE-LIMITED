@@ -5,14 +5,14 @@ export const productCategories: ProductCategory[] = [
     id: 'fresh-vegetables',
     title: 'Fresh Vegetables',
     description: 'Fresh Indian vegetables selected for quality, consistency and export-oriented supply requirements.',
-    image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789837583/stocon/products/fresh-vegetables.webp',
+    image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789837432/stocon/products/fresh-fruits.webp',
     products: ['Green Chilli', 'Lemon', 'Onion', 'Potato', 'Tomato', 'Ginger', 'Garlic', 'Seasonal Vegetables']
   },
   {
     id: 'fresh-fruits',
     title: 'Fresh Fruits',
     description: 'Fresh fruits sourced for dependable supply, careful handling and international market requirements.',
-    image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789837432/stocon/products/fresh-fruits.webp',
+    image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789837773/d6a404c1-aaa2-4d32-8f63-70b006a346db.png',
     products: ['Pomegranate', 'Mango', 'Banana', 'Grapes', 'Watermelon', 'Muskmelon', 'Seasonal Fruits', 'Requirement-Based Fruits']
   },
   {
@@ -26,7 +26,7 @@ export const productCategories: ProductCategory[] = [
     id: 'imported-fruits',
     title: 'Imported Fruits',
     description: 'Premium imported fruit options selected to meet changing buyer and Indian market requirements.',
-    image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789837443/stocon/products/imported-fruits.webp',
+    image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789837850/707a1f94-e13f-4bfa-9d61-e11352b91c2a.png',
     products: ['Apple', 'Kiwi', 'Dragon Fruit', 'Pear', 'Beauty Pear', 'Mandarin Orange', 'Orange', 'Red Globe Grapes']
   },
   {
