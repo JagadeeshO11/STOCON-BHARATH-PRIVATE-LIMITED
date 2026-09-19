@@ -5,7 +5,7 @@ export const productCategories: ProductCategory[] = [
     id: 'fresh-vegetables',
     title: 'Fresh Vegetables',
     description: 'Fresh Indian vegetables selected for quality, consistency and export-oriented supply requirements.',
-    image: 'https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=1200&q=85',
+    image: 'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=1200&q=85',
     products: ['Green Chilli', 'Lemon', 'Onion', 'Potato', 'Tomato', 'Ginger', 'Garlic', 'Seasonal Vegetables']
   },
   {
