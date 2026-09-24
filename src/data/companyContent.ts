@@ -7,26 +7,11 @@ export const companyContent = {
     futureDirection: 'The business is focused on building a wider export portfolio and exploring additional food and agri-product opportunities.',
   },
   productCategories: [
-    {
-      title: 'Fresh Fruits',
-      description: 'Export-oriented fresh fruits sourced with attention to freshness, grading, packing and market requirements.',
-    },
-    {
-      title: 'Fresh Vegetables',
-      description: 'Fresh Indian vegetables selected for quality, consistency and dependable supply.',
-    },
-    {
-      title: 'Food & Non-Perishable Products',
-      description: 'Shelf-stable food products suitable for bulk and export requirements.',
-    },
-    {
-      title: 'Imported Fruits',
-      description: 'Selected premium imported fruits for buyers seeking wider product availability in the Indian market.',
-    },
-    {
-      title: 'Spices & Agri Products',
-      description: 'Indian spices and agricultural products available for requirement-based sourcing and export discussions.',
-    },
+    { title: 'Fresh Fruits', description: 'Export-oriented fresh fruits sourced with attention to freshness, grading, packing and market requirements.' },
+    { title: 'Fresh Vegetables', description: 'Fresh Indian vegetables selected for quality, consistency and dependable supply.' },
+    { title: 'Food & Non-Perishable Products', description: 'Shelf-stable food products suitable for bulk and export requirements.' },
+    { title: 'Imported Fruits', description: 'Selected premium imported fruits for buyers seeking wider product availability in the Indian market.' },
+    { title: 'Spices & Agri Products', description: 'Indian spices and agricultural products available for requirement-based sourcing and export discussions.' },
   ],
   services: [
     'Direct and requirement-based product sourcing',
@@ -38,21 +23,25 @@ export const companyContent = {
     'Transportation and shipment coordination',
   ],
   businessPrinciples: [
-    {
-      title: 'Export first',
-      text: 'International trade and export opportunities remain at the center of the business direction.',
-    },
-    {
-      title: 'Requirement focused',
-      text: 'Product selection, quantity and supply discussions begin with the buyer requirement and destination market.',
-    },
-    {
-      title: 'Quality at every stage',
-      text: 'Sourcing, grading, packing and dispatch are treated as connected parts of a dependable supply process.',
-    },
-    {
-      title: 'Clear communication',
-      text: 'Straightforward product information, documentation and shipment coordination help create stronger business relationships.',
-    },
+    { title: 'Export first', text: 'International trade and export opportunities remain at the center of the business direction.' },
+    { title: 'Requirement focused', text: 'Product selection, quantity and supply discussions begin with the buyer requirement and destination market.' },
+    { title: 'Quality at every stage', text: 'Sourcing, grading, packing and dispatch are treated as connected parts of a dependable supply process.' },
+    { title: 'Clear communication', text: 'Straightforward product information, documentation and shipment coordination help create stronger business relationships.' },
+  ],
+  buyerSupport: [
+    { title: 'Product selection', text: 'Discuss the product, grade, quantity and destination before confirming the supply plan.' },
+    { title: 'Quality & grading', text: 'Align specifications such as size, appearance, freshness and packing requirements before dispatch.' },
+    { title: 'Packaging', text: 'Plan suitable cartons, bags or other export-oriented packing formats according to the product and destination.' },
+    { title: 'Cold-chain handling', text: 'Use temperature-controlled handling where the product and journey require it to protect freshness.' },
+    { title: 'Documentation', text: 'Coordinate the practical documents and shipment information needed for the agreed trade flow.' },
+    { title: 'Logistics', text: 'Coordinate transportation and air or sea freight around the shipment schedule and destination.' },
+  ],
+  marketFocus: [
+    'GCC and Middle East',
+    'Southeast Asia',
+    'European markets',
+    'United Kingdom',
+    'Africa',
+    'Other requirement-based destinations',
   ],
 } as const
