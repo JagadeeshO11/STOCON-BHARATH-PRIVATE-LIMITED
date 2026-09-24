@@ -1,1 +1,21 @@
-/* Home page composes independently styled sections. */
+.home-buyer-support,.home-markets{padding:var(--section-space) var(--container-padding)}
+.home-buyer-support{background:#fff}
+.home-section-heading{max-width:var(--content-width);margin:0 auto 42px}
+.home-section-heading h2,.home-markets h2{font-size:clamp(38px,5vw,68px);line-height:1.04;letter-spacing:-.045em;margin:10px 0 16px;color:var(--brand-deep);max-width:850px}
+.home-section-heading h2 em,.home-markets h2 em{font-family:var(--body-font);font-weight:500;color:var(--brand-blue)}
+.home-section-heading p,.home-markets p{max-width:760px;color:var(--brand-text-muted);font-size:var(--fs-body);line-height:1.8;font-weight:700}
+.home-support-grid{max-width:var(--content-width);margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.home-support-grid article{position:relative;padding:27px;border:1px solid var(--brand-border);border-radius:20px;background:var(--brand-surface);min-height:210px}
+.home-support-grid svg{color:var(--brand-aqua);width:28px;height:28px}
+.home-support-grid span{position:absolute;top:24px;right:24px;color:var(--brand-blue);font:10px var(--body-font)}
+.home-support-grid h3{margin:25px 0 9px;color:var(--brand-deep);font-size:21px}
+.home-support-grid p{margin:0;color:var(--brand-text-muted);line-height:1.7;font-weight:700}
+.home-markets{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;background:var(--brand-surface-aqua)}
+.home-markets>div{max-width:700px}
+.home-markets a{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:14px 19px;border-radius:999px;background:var(--gradient-brand);color:var(--brand-deep);font-weight:800}
+.home-market-list{display:grid;grid-template-columns:1fr 1fr;align-content:center;gap:1px;background:var(--brand-border);border-radius:20px;overflow:hidden}
+.home-market-list div{padding:28px;background:#fff;display:grid;gap:10px}
+.home-market-list span{color:var(--brand-blue);font:10px var(--body-font)}
+.home-market-list strong{color:var(--brand-deep)}
+@media(max-width:850px){.home-support-grid{grid-template-columns:1fr 1fr}.home-markets{grid-template-columns:1fr;gap:35px}}
+@media(max-width:560px){.home-support-grid,.home-market-list{grid-template-columns:1fr}.home-buyer-support,.home-markets{padding:60px 22px}}
