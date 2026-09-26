@@ -5,10 +5,10 @@ export function BrochureFloat(){
   return (
     <a
       className="brochure-float"
-      href="/brochure"
+      href="/brochure.pdf"
       target="_blank"
       rel="noreferrer"
-      aria-label="Open company brochure"
+      aria-label="Download company brochure PDF"
     >
       <Download size={16}/>
       <span>BROCHURE</span>
