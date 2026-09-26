@@ -1,4 +1,4 @@
-import { ArrowRight, Globe2, Leaf, ShieldCheck, Sprout } from 'lucide-react'
+import { ArrowRight, Globe2, Leaf, ShieldCheck, Sprout, MessageCircle, Download } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import './Hero.css'
@@ -7,12 +7,12 @@ const logoUrl = 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789366884/3
 const heroVideo = 'https://res.cloudinary.com/dwmjz9csc/video/upload/v1789390588/now_genrate_the_video_tqrqom.mp4'
 
 const categories = [
-  { name: 'Fresh Vegetables', slug: 'fresh-vegetables', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-spices' },
-  { name: 'Fresh Fruits', slug: 'fresh-fruits', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376279/hero-grains.webp', pos: 'node-grains' },
-  { name: 'Food & Non-Perishable', slug: 'non-perishable', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376292/hero-oil-seeds.jpg', pos: 'node-oil' },
-  { name: 'Imported Fruits', slug: 'imported-fruits', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389015/hero-fresh-fruits-vegetables.png', pos: 'node-fruits' },
-  { name: 'Spices & Herbs', slug: 'spices-herbs', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389022/hero-dehydrated-products.jpg', pos: 'node-dehydrated' },
-  { name: 'Grains & Pulses', slug: 'grains-pulses', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389031/hero-processed-foods.jpg', pos: 'node-processed' },
+  { name: 'Fresh Vegetables', slug: 'fresh-vegetables', image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789838380/b66d7612-89e6-4095-aba2-841d5589b533.png', pos: 'node-spices' },
+  { name: 'Fresh Fruits', slug: 'fresh-fruits', image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789837773/d6a404c1-aaa2-4d32-8f63-70b006a346db.png', pos: 'node-grains' },
+  { name: 'Non-Perishable', slug: 'non-perishable', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389022/hero-dehydrated-products.jpg', pos: 'node-oil' },
+  { name: 'Imported Fruits', slug: 'imported-fruits', image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789837850/707a1f94-e13f-4bfa-9d61-e11352b91c2a.png', pos: 'node-fruits' },
+  { name: 'Spices & Herbs', slug: 'spices-herbs', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-dehydrated' },
+  { name: 'Grains & Pulses', slug: 'grains-pulses', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376279/hero-grains.webp', pos: 'node-processed' },
 ]
 
 export function Hero() {
@@ -39,7 +39,7 @@ export function Hero() {
 
           <div className="brand-hub">
             <div className="brand-hub__ring">
-              <img className="brand-hub__logo" src={logoUrl} alt="STOCON Bharath Private Limited" />
+              <img className="brand-hub__logo" src={logoUrl} alt="STOCON BHARATH PRIVATE LIMITED" />
             </div>
           </div>
 
@@ -54,87 +54,42 @@ export function Hero() {
         </motion.div>
 
         <motion.div className="hero-copy" initial={{ opacity: 0, x: 26 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.65, delay: 0.18 }}>
-          <div className="eyebrow"><span />INDIA · GLOBAL EXPORT PARTNER</div>
+          <div className="hero-leaf-badge">
+            <Leaf size={16} className="leaf-badge-icon" />
+            <span>Trusted Indian Exporter of Fresh Fruits & Vegetables for Global Markets</span>
+          </div>
+
           <h1 className="hero-title">
-            <span>Fresh Indian Products.</span>
-            <span>Supplying to</span>
+            <span>STOCON BHARATH is a leading Indian exporter of fresh fruits & vegetables,</span>
             <em className="hero-title__accent">
-              <span>Global</span>
-              <span>Markets.</span>
+              supplying export-quality agri products to global buyers across the GCC, Europe, UK, USA, Southeast Asia, and Africa.
             </em>
           </h1>
-          <p>Export-focused sourcing of fresh fruits, vegetables and food products, prepared around buyer requirements and destination markets.</p>
+
+          <p className="hero-text-highlight">
+            Whether you’re an international importer or an Indian exporter, we deliver reliable, on-time shipments with full transparency.
+          </p>
+
           <div className="hero-actions">
-            <Link className="primary-btn" to="/products">Explore Our Products <ArrowRight size={18} /></Link>
+            <Link className="primary-btn" to="/contact">
+              Request a Quote <ArrowRight size={18} />
+            </Link>
+            <a className="secondary-whatsapp-btn" href="https://wa.me/919566055540" target="_blank" rel="noreferrer">
+              <MessageCircle size={18} /> WhatsApp Us
+            </a>
+            <a className="secondary-brochure-btn" href="/brochure.pdf" target="_blank" rel="noreferrer">
+              <Download size={18} /> View Brochure
+            </a>
           </div>
         </motion.div>
       </div>
 
       <div className="hero-features">
-        <div><Globe2 /><span><strong>Global Markets</strong><small>Export-focused supply</small></span></div>
-        <div><Leaf /><span><strong>Quality Focus</strong><small>Freshness & grading</small></span></div>
-        <div><ShieldCheck /><span><strong>Reliable Supply</strong><small>Clear coordination</small></span></div>
-        <div><Sprout /><span><strong>Export Ready</strong><small>Packaging & logistics</small></span></div>
+        <div><Globe2 /><span><strong>Global Markets</strong><small>GCC, Europe, UK, USA, SE Asia, Africa</small></span></div>
+        <div><Leaf /><span><strong>Verified Farm Sourcing</strong><small>Freshness & competitive pricing</small></span></div>
+        <div><ShieldCheck /><span><strong>Quality & Transparency</strong><small>Strict inspection & full compliance</small></span></div>
+        <div><Sprout /><span><strong>End-to-End Export</strong><small>Packaging, Cold Chain & Shipping</small></span></div>
       </div>
-
-      <style>{`
-        .hero .hero-copy .hero-title {
-          width: 100%;
-          max-width: 100%;
-          min-width: 0;
-          box-sizing: border-box;
-          text-wrap: balance;
-        }
-        .hero .hero-copy .hero-title > span {
-          display: block;
-          max-width: 100%;
-        }
-        .hero .hero-copy .hero-title__accent {
-          display: block;
-          width: 100%;
-          max-width: 100%;
-          min-width: 0;
-          box-sizing: border-box;
-          white-space: normal !important;
-          overflow: visible !important;
-          overflow-wrap: normal;
-          word-break: normal;
-          line-height: 1.06;
-          font-size: clamp(34px, 4.2vw, 64px);
-        }
-        .hero .hero-copy .hero-title__accent > span {
-          display: block;
-          max-width: 100%;
-        }
-        @media (max-width: 1180px) {
-          .hero .hero-copy {
-            width: min(100%, 640px);
-          }
-        }
-        @media (max-width: 760px) {
-          .hero .hero-copy {
-            width: min(100%, 560px);
-          }
-          .hero .hero-copy .hero-title {
-            font-size: clamp(34px, 10vw, 52px);
-            line-height: 1.06;
-            letter-spacing: -0.04em;
-          }
-          .hero .hero-copy .hero-title__accent {
-            font-size: clamp(24px, 7.2vw, 40px);
-            line-height: 1.12;
-            letter-spacing: -0.025em;
-          }
-        }
-        @media (max-width: 420px) {
-          .hero .hero-copy .hero-title {
-            font-size: clamp(30px, 9.4vw, 44px);
-          }
-          .hero .hero-copy .hero-title__accent {
-            font-size: clamp(21px, 6.8vw, 31px);
-          }
-        }
-      `}</style>
     </section>
   )
 }

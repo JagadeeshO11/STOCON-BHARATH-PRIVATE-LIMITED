@@ -1,6 +1,6 @@
 import './AnnouncementTicker.css'
 
-const categories=['FOOD PRODUCTS','FRESH FRUITS','VEGETABLES','INDIAN SPICES','GLOBAL EXPORT','QUALITY ASSURED']
+const categories=['FRESH FRUITS','FRESH VEGETABLES','EXPORT QUALITY','GCC & EUROPE SHIPMENTS','DIRECT FARM SOURCING','COLD CHAIN LOGISTICS']
 
 function TickerGroup({copy=false}:{copy?:boolean}){
  return <div className="ticker__group" aria-hidden={copy}>

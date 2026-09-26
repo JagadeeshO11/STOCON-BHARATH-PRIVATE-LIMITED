@@ -1,17 +1,121 @@
-import { ArrowRight, Boxes, ClipboardCheck, FileCheck2, Globe2, Handshake, Plane, Ship, Snowflake, Truck, Warehouse } from 'lucide-react'
+import { ArrowRight, FileCheck2, Plane, Truck, Warehouse, ShieldCheck } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
-import { companyContent } from '../../data/companyContent'
 import './Services.css'
 
-const serviceGroups=[
- {label:'EXPORT LOGISTICS',title:'Move products with a coordinated logistics plan.',text:'Coordinate the practical movement of fresh and food products from preparation through dispatch and destination delivery.',items:[['Air freight','Suitable for time-sensitive or smaller consignments.',Plane],['Sea freight','Suitable for larger shipments and containerized export movement.',Ship],['Transportation','Coordinate inland movement between sourcing, packing, storage and dispatch.',Truck],['Cold-chain handling','Temperature-controlled handling where product requirements call for it.',Snowflake]]},
- {label:'PRODUCT & QUALITY',title:'Prepare the right product for the right market.',text:'Product selection and preparation can be aligned with buyer specifications, quality expectations and destination requirements.',items:[['Product sourcing','Requirement-based sourcing through Indian suppliers and agricultural networks.',Globe2],['Variety identification','Match product varieties and specifications to buyer requirements.',Boxes],['Grading & inspection','Review size, appearance, freshness and agreed quality parameters.',ClipboardCheck],['Export packaging','Select practical packaging formats for product protection and transit.',Warehouse]]},
- {label:'TRADE SUPPORT',title:'Keep documentation and communication clear.',text:'A smoother export journey depends on accurate information, coordinated paperwork and consistent communication between the parties.',items:[['Documentation support','Coordinate commercial and shipment documentation required for the agreed trade flow.',FileCheck2],['Customs coordination','Support the information flow around customs and export clearance.',ClipboardCheck],['Supply discussions','Discuss recurring quantities, specifications and commercial requirements.',Handshake],['Global buyer coordination','Keep product, shipment and destination discussions connected from enquiry to dispatch.',Globe2]]}
+const mainServices = [
+  {
+    icon: Plane,
+    badge: 'AIR & SEA FREIGHT',
+    title: 'Air & Sea Freight Solutions',
+    description: 'We provide end-to-end air and sea freight coordination for fresh perishable produce and bulk agri commodities.',
+    features: [
+      'Express air freight for high-perishable fruits & green chillies',
+      'Containerized sea freight (Reefer & Dry Containers)',
+      'Optimal route selection minimizing transit times',
+      'Full shipment tracking and status updates'
+    ]
+  },
+  {
+    icon: FileCheck2,
+    badge: 'CUSTOMS CLEARANCE',
+    title: 'Customs Clearance & Documentation',
+    description: 'Complete regulatory compliance and phytosanitary documentation support ensuring fast clearance at origin and destination ports.',
+    features: [
+      'Phytosanitary certificates & APEDA compliance',
+      'Certificate of Origin & customs documentation',
+      'Import/Export clearance management',
+      'Regulatory compliance checks for EU, GCC, UK & US markets'
+    ]
+  },
+  {
+    icon: Warehouse,
+    badge: 'STORAGE & PACKAGING',
+    title: 'Storage & Export Standard Packaging',
+    description: 'International export-grade packaging with temperature-controlled cold chain storage to maintain produce freshness.',
+    features: [
+      'Export-grade corrugated boxes & net bags',
+      'Custom branding & labeling per buyer requirements',
+      'Cold storage facilities maintained at optimal temperatures',
+      'Pre-cooling and moisture-controlled handling'
+    ]
+  },
+  {
+    icon: Truck,
+    badge: 'INLAND LOGISTICS',
+    title: 'Refrigerated Inland Transportation',
+    description: 'Direct temperature-controlled logistics connecting verified farms across India directly to major ports and airports.',
+    features: [
+      'Direct farm-to-port transportation',
+      'Refrigerated trucks (reefer containers) for perishables',
+      'Fast turnaround time from harvest to packing',
+      'Minimized handling to prevent product damage'
+    ]
+  }
 ]
 
-export function Services(){return <><section className="page-hero page-hero--services"><AnimatedPageHero label="OUR SERVICES" prefix="From product sourcing to" typed="global shipment." description="STOCON BHARATH supports requirement-based sourcing, quality preparation, export packaging, documentation and logistics coordination."/></section>
-<section className="services-intro"><div><span className="section-label">END-TO-END SUPPORT</span><h2>One coordinated process from <em>source to destination.</em></h2></div><p>Our service approach is built around the practical stages of an export order. The exact process, packaging, shipment mode and documentation depend on the product, quantity, destination and buyer requirements.</p></section>
-{serviceGroups.map((group,gi)=><section className={'service-group '+(gi%2?'service-group--tint':'')} key={group.label}><div className="service-group__head"><span className="section-label">{group.label}</span><h2>{group.title}</h2><p>{group.text}</p></div><div className="service-group__grid">{group.items.map(([title,text,Icon],i)=>{const I=Icon as typeof Boxes;return <motion.article key={String(title)} initial={{opacity:0,y:22}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.06}}><span className="service-number">0{i+1}</span><I/><h3>{String(title)}</h3><p>{String(text)}</p></motion.article>})}</div></section>)}
-<section className="services-cta"><div><span className="section-label">START A REQUIREMENT</span><h2>Tell us the product, quantity and <em>destination market.</em></h2><p>{companyContent.overview.primaryFocus}</p></div><Link to="/contact">Request an enquiry <ArrowRight size={18}/></Link></section></>}
+export function Services() {
+  return (
+    <>
+      <section className="page-hero page-hero--services">
+        <AnimatedPageHero
+          label="STOCON BHARATH SERVICES"
+          prefix="End-to-End Agri"
+          typed="Export & Import Solutions."
+          description="We provide comprehensive export and import services from India, ensuring your shipments move faster, safer, and without delays."
+        />
+      </section>
+
+      <section className="services-intro">
+        <div>
+          <span className="section-label">OUR SERVICE CAPABILITIES</span>
+          <h2>End-to-End Trade Execution with <em>Precision & Compliance.</em></h2>
+        </div>
+      </section>
+
+      <section className="services-detail-grid">
+        {mainServices.map((service, index) => {
+          const Icon = service.icon
+          return (
+            <motion.div
+              key={service.title}
+              className="service-detail-card"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="card-badge">
+                <Icon size={18} />
+                <span>{service.badge}</span>
+              </div>
+              <h3>{service.title}</h3>
+              <p className="card-desc">{service.description}</p>
+
+              <ul className="feature-list">
+                {service.features.map((feat) => (
+                  <li key={feat}>
+                    <ShieldCheck size={16} className="check-icon" />
+                    <span>{feat}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )
+        })}
+      </section>
+
+      <section className="services-cta">
+        <div>
+          <span className="section-label">NEED A CUSTOM LOGISTICS PLAN?</span>
+          <h2>Request a custom quote for your <em>shipment requirements.</em></h2>
+          <p>Whether you need full container loads (FCL) or air cargo consignments, our export specialists are here to assist you.</p>
+        </div>
+        <Link to="/contact" className="services-cta-btn">
+          Request a Quote <ArrowRight size={18} />
+        </Link>
+      </section>
+    </>
+  )
+}

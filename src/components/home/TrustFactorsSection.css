@@ -1,0 +1,108 @@
+.trust-factors-section {
+  padding: 100px 24px;
+  background: #ffffff;
+  color: #071915;
+  position: relative;
+}
+
+.trust-factors-section .section-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.trust-factors-section h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: #071915;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.trust-factors-section h2 em {
+  font-style: normal;
+  color: #10b981;
+}
+
+.trust-factors-section .subtitle {
+  font-size: 1.08rem;
+  color: #4b635c;
+  max-width: 680px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trust-card {
+  display: flex;
+  gap: 20px;
+  background: #f6fcf9;
+  border: 1px solid #e1f0eb;
+  border-radius: 20px;
+  padding: 28px 24px;
+  transition: all 0.3s ease;
+  align-items: flex-start;
+  box-shadow: 0 8px 24px rgba(9, 38, 43, 0.03);
+}
+
+.trust-card:hover {
+  background: #ffffff;
+  border-color: #10b981;
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(9, 38, 43, 0.08);
+}
+
+.trust-icon-box {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  margin-top: 2px;
+}
+
+.trust-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #071915;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.trust-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b635c;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .trust-factors-section {
+    padding: 60px 16px;
+  }
+  .trust-card {
+    flex-direction: column;
+  }
+}

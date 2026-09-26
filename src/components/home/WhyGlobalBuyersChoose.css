@@ -1,0 +1,122 @@
+.why-choose-section {
+  padding: 100px 24px;
+  background: #edf7f4;
+  color: #0b2520;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.leaf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45, 212, 191, 0.15);
+  color: #0d5c4d;
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  padding: 8px 20px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.leaf-badge-icon {
+  color: #10b981;
+}
+
+.why-choose-section h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: #0b2520;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.why-choose-section h2 em {
+  font-style: normal;
+  color: #10b981;
+}
+
+.subtitle {
+  font-size: 1.08rem;
+  color: #4a635d;
+  max-width: 680px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 50px;
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reason-card {
+  background: #ffffff;
+  border: 1px solid var(--brand-border);
+  border-radius: 20px;
+  padding: 34px 28px;
+  transition: all 0.35s ease;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(9, 38, 43, 0.04);
+}
+
+.reason-card:hover {
+  transform: translateY(-6px);
+  border-color: #10b981;
+  box-shadow: 0 16px 36px rgba(9, 38, 43, 0.1);
+}
+
+.reason-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.reason-card:hover .reason-icon-wrapper {
+  transform: scale(1.1) rotate(4deg);
+  background: #10b981;
+  color: #ffffff;
+}
+
+.reason-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0b2520;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.reason-card p {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #4a635d;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .why-choose-section {
+    padding: 60px 16px;
+  }
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,7 +8,7 @@ export function BrochureFloat(){
       href="/brochure.pdf"
       target="_blank"
       rel="noreferrer"
-      aria-label="Open company brochure"
+      aria-label="View company brochure"
     >
       <Download size={16}/>
       <span>BROCHURE</span>

@@ -1,19 +1,94 @@
-import { ArrowRight, Globe2, Leaf, Target, Handshake, MapPin, PackageCheck, ClipboardCheck, Truck, FileCheck2 } from 'lucide-react'
+import { ArrowRight, Globe2, Leaf, Target, Handshake, ShieldCheck, Sprout, Snowflake, Truck } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { AnimatedPageHero } from '../../components/ui/AnimatedPageHero'
-import { companyContent } from '../../data/companyContent'
 import './About.css'
 
-const values=[['Export mindset','Building practical trade opportunities around international markets.',Globe2],['Requirement focused','Matching product selection, quantity and supply discussions to buyer needs.',Target],['Quality at every stage','Keeping sourcing, grading, packing and dispatch connected.',Leaf],['Long-term partnerships','Clear communication and dependable coordination for repeat business.',Handshake]]
+const strengths = [
+  { icon: Sprout, title: 'Direct Farm Sourcing', text: 'We source directly from verified farms across India, ensuring products are harvested at peak freshness and competitive pricing.' },
+  { icon: ShieldCheck, title: 'Strict Quality Inspection', text: 'Every shipment undergoes size, grading, and quality compliance checks to meet stringent international export standards.' },
+  { icon: Snowflake, title: 'Cold Chain & Packaging', text: 'Proper temperature-controlled handling and international export-grade packaging preserve farm freshness during long transit.' },
+  { icon: Truck, title: 'End-to-End Export Logistics', text: 'We manage full supply operations including inland transport, customs clearance, documentation, and global shipping.' }
+]
 
-export function About(){const {overview,businessPrinciples,buyerSupport}=companyContent;return <><section className="page-hero page-hero--about"><AnimatedPageHero label="ABOUT STOCON BHARATH" prefix="From India, with an" typed="export-focused direction." description="STOCON BHARATH PRIVATE LIMITED is building an export-focused food and agri-product business from India."/></section>
-<section className="about-story"><motion.div className="about-story__copy" initial={{opacity:0,x:-24}} whileInView={{opacity:1,x:0}} viewport={{once:true}}><span className="section-label">WHO WE ARE</span><h2>Building dependable supply from <em>India to global markets.</em></h2><p>{overview.primaryFocus}</p><p>{overview.domesticSales}</p><p>Our approach combines requirement-based sourcing, quality-focused handling and clear shipment coordination so buyers can plan with confidence.</p><p>We are developing a broader network of products and trade opportunities while keeping the buying conversation simple: what is required, in what quantity, to which destination, and under which specifications.</p><Link to="/products">Explore our product categories <ArrowRight size={17}/></Link></motion.div>
-<div className="about-story__cards">{[[Target,'Export focused','International trade is the primary direction of the business.'],[Leaf,'Quality focused','Products are considered through sourcing, grading, packaging and handling requirements.'],[Globe2,'Market connected','Product discussions can be aligned with destination markets and buyer needs.']].map(([Icon,title,text],i)=>{const I=Icon as typeof Target;return <motion.article key={String(title)} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} whileHover={{y:-7}} transition={{delay:i*.08}}><I/><h3>{String(title)}</h3><p>{String(text)}</p></motion.article>})}</div></section>
+const values = [
+  { icon: Globe2, title: 'Global Market Reach', text: 'Exporting fresh Indian produce to the GCC, Europe, UK, USA, Southeast Asia, and Africa.' },
+  { icon: Target, title: 'Requirement Focused', text: 'Tailoring product grade, packing specifications, and shipment schedules around buyer needs.' },
+  { icon: Leaf, title: 'Uncompromising Freshness', text: 'Sourcing at peak harvest and using fast-track logistics to minimize transit delays.' },
+  { icon: Handshake, title: 'Transparent Business', text: 'Clear documentation, transparent pricing, and dependable coordination for long-term partnerships.' }
+]
 
-<section className="about-direction"><div><span className="section-label">HOW WE WORK</span><h2>From sourcing and grading to <em>shipment coordination.</em></h2><p>We focus on practical export requirements: identify the product, understand the quantity and destination, coordinate preparation and keep the supply process clear.</p></div><div className="about-values">{values.map(([title,text,Icon],i)=>{const I=Icon as typeof Globe2;return <motion.article key={String(title)} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.07}}><I/><h3>{String(title)}</h3><p>{String(text)}</p></motion.article>})}</div></section>
+export function About() {
+  return (
+    <>
+      <section className="page-hero page-hero--about">
+        <AnimatedPageHero
+          label="ABOUT STOCON BHARATH"
+          prefix="Trusted Exporter of"
+          typed="Fresh Fruits & Vegetables."
+          description="STOCON BHARATH PRIVATE LIMITED is a leading Indian exporter and supplier of export-quality agri products, delivering freshness, consistency, and reliability to global markets."
+        />
+      </section>
 
-<section className="about-supply"><div className="about-supply__heading"><span className="section-label">OUR SUPPLY JOURNEY</span><h2>A clear path from <em>requirement to dispatch.</em></h2><p>Every order can be discussed around the stages that matter most to the buyer and the destination market.</p></div><div className="about-supply__grid">{buyerSupport.map((item,index)=>{const icons=[PackageCheck,ClipboardCheck,Leaf,Target,FileCheck2,Truck];const Icon=icons[index];return <motion.article key={item.title} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:index*.06}}><span>0{index+1}</span><Icon/><h3>{item.title}</h3><p>{item.text}</p></motion.article>})}</div></section>
+      <section className="about-story">
+        <motion.div className="about-story__copy" initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+          <span className="section-label">WHO WE ARE</span>
+          <h2>Your Trusted Partner for <em>Global Fruit & Vegetable Trade</em></h2>
+          <p>
+            STOCON BHARATH PRIVATE LIMITED is a leading Indian exporter and supplier of premium-quality fresh fruits and vegetables, committed to delivering excellence, freshness, and reliability across domestic and international markets.
+          </p>
+          <p>
+            With a strong sourcing network, modern handling practices, and export-focused quality standards, we ensure seamless supply chain solutions for exporters, importers, wholesalers, and global buyers.
+          </p>
+          <p>
+            From Alphonso mangoes, pomegranates, grapes, onions, and chillies to other fresh and non-perishable products — we manage end-to-end export operations with full transparency.
+          </p>
+          <Link to="/products" className="about-btn">Explore Our Products <ArrowRight size={17} /></Link>
+        </motion.div>
 
-<section className="about-principles"><div><span className="section-label">BUSINESS PRINCIPLES</span><h2>A practical export process, <em>built around requirements.</em></h2><p>Clear product information, quality checks, packaging and logistics coordination form the foundation of our export approach.</p></div><div className="about-principles__list">{businessPrinciples.map(({title,text},index)=><motion.article key={title} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:index*.06}}><span>0{index+1}</span><div><h3>{title}</h3><p>{text}</p></div></motion.article>)}</div></section>
-<section className="about-closing"><MapPin/><div><span className="section-label">LET'S CONNECT</span><h2>Take your requirement from <em>India to its market.</em></h2><p>Share the product, quantity and destination market for an export-focused business discussion.</p></div><Link to="/contact">Contact STOCON <ArrowRight size={18}/></Link></section></>}
+        <div className="about-story__cards">
+          {strengths.map((item, i) => {
+            const Icon = item.icon
+            return (
+              <motion.article key={item.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} whileHover={{ y: -7 }} transition={{ delay: i * 0.08 }}>
+                <Icon size={26} style={{ color: '#4ade80', marginBottom: '12px' }} />
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </motion.article>
+            )
+          })}
+        </div>
+      </section>
+
+      <section className="about-direction">
+        <div>
+          <span className="section-label">OUR CORE VALUES</span>
+          <h2>Committed to Quality, Integrity & <em>Global Excellence.</em></h2>
+          <p>Every trade partnership is built on clear communication, accurate documentation, and dependable shipment coordination.</p>
+        </div>
+        <div className="about-values">
+          {values.map((item, i) => {
+            const Icon = item.icon
+            return (
+              <motion.article key={item.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}>
+                <Icon size={24} style={{ color: '#4ade80', marginBottom: '10px' }} />
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </motion.article>
+            )
+          })}
+        </div>
+      </section>
+
+      <section className="about-closing">
+        <Globe2 size={40} style={{ color: '#4ade80' }} />
+        <div>
+          <span className="section-label">START A TRADE CONVERSATION</span>
+          <h2>Ready to source export-quality <em>produce from India?</em></h2>
+          <p>Tell us your requirement, target quantity, and destination port. Our trade team will respond promptly with pricing and availability.</p>
+        </div>
+        <Link to="/contact" className="about-closing-btn">Contact STOCON BHARATH <ArrowRight size={18} /></Link>
+      </section>
+    </>
+  )
+}
