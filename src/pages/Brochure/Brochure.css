@@ -1,0 +1,43 @@
+.brochure-hero{background:linear-gradient(110deg,rgba(23,63,70,.96),rgba(46,95,91,.58)),url('https://images.unsplash.com/photo-1494412519320-0d5c0b7f3198?auto=format&fit=crop&w=1800&q=85') center/cover}
+.brochure-page{background:var(--brand-surface);padding-bottom:var(--section-space)}
+.brochure-intro,.brochure-categories,.brochure-flow,.brochure-market{width:min(1240px,calc(100% - 2 * var(--container-padding)));margin:0 auto}
+.brochure-intro{padding:clamp(68px,8vw,112px) 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:34px;align-items:end}
+.brochure-intro h2,.brochure-section-head h2,.brochure-market h2{margin:12px 0 16px;font-size:clamp(38px,5vw,62px);line-height:1.04;letter-spacing:-.045em;color:var(--brand-deep)}
+.brochure-intro h2 em,.brochure-section-head h2 em,.brochure-market h2 em{font-family:var(--body-font);font-weight:500;color:var(--brand-blue)}
+.brochure-intro p{max-width:760px;color:var(--brand-text-muted);font-weight:700;line-height:1.8}
+.brochure-intro__actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}
+.brochure-action{min-height:48px;padding:13px 18px;border:1px solid var(--brand-border);border-radius:12px;background:#fff;color:var(--brand-deep);display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800}
+.brochure-action--primary{border-color:transparent;background:var(--gradient-brand)}
+.brochure-action--light{background:#fff;color:var(--brand-deep);border-color:rgba(255,255,255,.25)}
+.brochure-categories{padding:0 0 var(--section-space)}
+.brochure-section-head{max-width:760px}
+.brochure-category-grid{margin-top:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.brochure-category{position:relative;min-height:245px;padding:28px;border:1px solid var(--brand-border);border-radius:20px;background:#fff}
+.brochure-category>span{position:absolute;top:20px;right:22px;font:11px 'DM Mono',monospace;color:var(--brand-blue)}
+.brochure-category h3{margin:0 60px 10px 0;color:var(--brand-deep)}
+.brochure-category p{margin:0 0 18px;color:var(--brand-text-muted);font-size:14px;line-height:1.7}
+.brochure-category__products{display:flex;flex-wrap:wrap;gap:7px}
+.brochure-category__products small{padding:6px 9px;border-radius:999px;background:var(--brand-surface-aqua);color:var(--brand-deep);font-weight:700}
+.brochure-flow{padding:var(--section-space) 0}
+.brochure-flow__grid{margin-top:38px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.brochure-flow__grid article{position:relative;padding:26px;border:1px solid var(--brand-border);border-radius:18px;background:var(--brand-surface-aqua);min-height:225px}
+.brochure-flow__grid article>span{position:absolute;top:18px;right:20px;color:var(--brand-blue);font:10px 'DM Mono',monospace}
+.brochure-flow__grid svg{width:28px;height:28px;color:var(--brand-teal)}
+.brochure-flow__grid h3{margin:20px 0 8px;color:var(--brand-deep)}
+.brochure-flow__grid p{margin:0;color:var(--brand-text-muted);line-height:1.65;font-weight:700}
+.brochure-contact{width:min(1240px,calc(100% - 2 * var(--container-padding)));margin:0 auto;padding:clamp(34px,5vw,58px);display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:28px;align-items:center;border-radius:24px;background:var(--gradient-deep);color:#fff}
+.brochure-contact h2{margin:10px 0 13px;color:#fff;font-size:clamp(34px,4.2vw,54px);line-height:1.04}
+.brochure-contact h2 em{font-family:'Playfair Display',serif;color:var(--brand-aqua);font-weight:500}
+.brochure-contact p{margin:0;max-width:720px;color:#eaf7f4;font-weight:700;line-height:1.75}
+.brochure-contact .section-label{color:var(--brand-mint)}
+.brochure-contact__details{display:grid;gap:8px}
+.brochure-contact__details a{color:#fff;font-weight:800}
+.brochure-market{padding:var(--section-space) 0 0;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:start}
+.brochure-market__items{display:grid;gap:12px}
+.brochure-market__items>div{padding:22px;border:1px solid var(--brand-border);border-radius:16px;background:#fff}
+.brochure-market__items svg{color:var(--brand-blue);margin-bottom:14px}
+.brochure-market__items strong,.brochure-market__items span{display:block}
+.brochure-market__items strong{color:var(--brand-deep)}
+.brochure-market__items span{margin-top:6px;color:var(--brand-text-muted);line-height:1.55;font-weight:700}
+@media(max-width:900px){.brochure-intro{grid-template-columns:1fr;align-items:start}.brochure-intro__actions{justify-content:flex-start}.brochure-category-grid{grid-template-columns:1fr 1fr}.brochure-flow__grid{grid-template-columns:1fr 1fr}.brochure-contact{grid-template-columns:1fr}.brochure-market{grid-template-columns:1fr}}
+@media(max-width:600px){.brochure-intro,.brochure-categories,.brochure-flow,.brochure-market{width:calc(100% - 32px)}.brochure-intro{padding:56px 0}.brochure-category-grid,.brochure-flow__grid{grid-template-columns:1fr}.brochure-contact{width:calc(100% - 32px);padding:30px 22px}.brochure-market{padding:60px 0 0}.brochure-action{width:100%}}
