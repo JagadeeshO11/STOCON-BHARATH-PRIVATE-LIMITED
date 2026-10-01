@@ -26,7 +26,7 @@ export function About() {
           label="ABOUT STOCON BHARATH"
           prefix="Trusted Exporter of"
           typed="Fresh Fruits & Vegetables."
-          description="STOCON BHARATH PRIVATE LIMITED is a leading Indian exporter and supplier of export-quality agri products, delivering freshness, consistency, and reliability to global markets."
+          description={<> <span className="company-name">STOCON BHARATH PRIVATE LIMITED</span> is a leading Indian exporter and supplier of export-quality agri products, delivering freshness, consistency, and reliability to global markets.</>}
         />
       </section>
 
