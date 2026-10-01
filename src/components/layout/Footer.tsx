@@ -16,7 +16,7 @@ export function Footer() {
         <div className="site-footer__brand">
           <Link className="footer-brand" to="/">
             <img className="footer-logo" src={logoUrl} alt="STOCON BHARATH PRIVATE LIMITED logo" />
-            <span><strong>STOCON BHARATH</strong><small>PRIVATE LIMITED</small></span>
+            <span className="company-name"><strong>STOCON BHARATH</strong><small>PRIVATE LIMITED</small></span>
           </Link>
           <p>Export-focused business for food products, fresh fruits, vegetables, and spices from India.</p>
           <div className="footer-badge"><Globe2 size={16} /> INDIA • GLOBAL AGRI EXPORT PARTNER</div>
