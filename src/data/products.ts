@@ -31,10 +31,10 @@ export const productCategories: ProductCategory[] = [
   },
   {
     id: 'spices-herbs',
-    title: 'Spices & Agri Products',
-    description: 'Authentic Indian spices and herbs with strict phytosanitary quality grading and export compliance.',
+    title: 'Whole Spices & Herbs',
+    description: 'Whole Indian spices and herbs carefully sourced and graded for aroma, purity, colour, and export compliance.',
     image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp',
-    products: ['Turmeric Powder & Finger', 'Stemless Red Chilli', 'Black Pepper', 'Cumin Seeds', 'Coriander Seeds', 'Green Cardamom', 'Cloves']
+    products: ['Turmeric Finger', 'Whole Red Chilli', 'Black Peppercorns', 'Cumin Seeds', 'Coriander Seeds', 'Green Cardamom', 'Cloves']
   },
   {
     id: 'grains-pulses',
