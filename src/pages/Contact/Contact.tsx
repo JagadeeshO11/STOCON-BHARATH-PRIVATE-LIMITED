@@ -46,7 +46,7 @@ export function Contact() {
   return (
     <>
       <section className="page-hero page-hero--contact">
-        <AnimatedPageHero label="CONTACT STOCON BHARATH" prefix="Let's begin the" typed="conversation." description="Share your product or export requirement and connect with STOCON BHARATH PRIVATE LIMITED." />
+        <AnimatedPageHero label="CONTACT STOCON BHARATH" prefix="Let's begin the" typed="conversation." description={<>Share your product or export requirement and connect with <span className="company-name">STOCON BHARATH PRIVATE LIMITED</span>.</>} />
       </section>
 
       <section className="contact-page">
