@@ -18,8 +18,8 @@ const pillars = [
   {
     num: '03',
     icon: Award,
-    title: 'Import of Premium Fruits',
-    text: 'We also import high-quality fruits such as apples, kiwi, dragon fruit, and beauty pear to meet the increasing demand in the Indian market.'
+    title: 'Ground Spices & Herbs Supply',
+    text: 'We supply export-quality ground spices and dried herbs including turmeric, red chilli, coriander, cumin, black pepper, ginger, garlic, and selected dried herbs for domestic and international buyers.'
   },
   {
     num: '04',
