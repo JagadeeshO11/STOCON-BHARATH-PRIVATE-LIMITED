@@ -24,3 +24,9 @@
   .brand small{font-size:6.5px!important}
   .nav-cta{font-size:10px!important;padding:7px 10px!important}
 }
+
+/* Uniform company-name treatment */
+.company-name{display:block!important;font-family:var(--body-font)!important;font-size:22px!important;line-height:1.15!important;font-weight:700!important;letter-spacing:.04em!important;color:#fff!important;white-space:nowrap!important;background:none!important;background-image:none!important;-webkit-text-fill-color:#fff!important}
+@media(max-width:900px){.company-name{font-size:18px!important}}
+@media(max-width:520px){.company-name{font-size:15px!important}}
+@media(max-width:390px){.company-name{font-size:13.5px!important}}
