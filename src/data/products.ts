@@ -16,7 +16,7 @@ export const productCategories: ProductCategory[] = [
     products: ['Alphonso Mango', 'Kesar Mango', 'Bhagwa Pomegranate', 'Seedless Grapes', 'Banana', 'Watermelon', 'Muskmelon', 'Seasonal Fruits']
   },
   {
-     id: 'spices-herbs-ground',
+      id: 'spices-herbs-ground',
     title: 'Ground Spices & Herbs',
     description: 'Export-quality Indian ground spices and dried herbs, processed and packed for consistent aroma, colour, purity, and global buyer requirements.',
     image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp',
