@@ -63,7 +63,7 @@ export function Services() {
           label="STOCON BHARATH SERVICES"
           prefix="End-to-End Agri"
           typed="Export & Spice Supply Solutions."
-          description="We provide comprehensive export and import services from India, ensuring your shipments move faster, safer, and without delays."
+          description="We provide comprehensive export, spice and agri-product supply services from India, ensuring your shipments move efficiently, safely, and with clear documentation."
         />
       </section>
 
