@@ -32,7 +32,7 @@ export function OurServicesSection() {
         <div className="services-header">
           <div>
             <span className="services-badge">OUR SERVICES</span>
-            <h2>End-to-End Agri Export & <em>Import Solutions</em></h2>
+            <h2>End-to-End Agri Export & <em>Spice Supply Solutions</em></h2>
           </div>
         </div>
 
