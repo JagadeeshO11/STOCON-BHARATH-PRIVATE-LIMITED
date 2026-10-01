@@ -16,11 +16,11 @@ export const productCategories: ProductCategory[] = [
     products: ['Alphonso Mango', 'Kesar Mango', 'Bhagwa Pomegranate', 'Seedless Grapes', 'Banana', 'Watermelon', 'Muskmelon', 'Seasonal Fruits']
   },
   {
-    id: 'imported-fruits',
-    title: 'Imported Fruits',
-    description: 'High-quality imported fruits such as apples, kiwi, dragon fruit, and beauty pear imported to meet growing domestic demand in India.',
-    image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789837850/707a1f94-e13f-4bfa-9d61-e11352b91c2a.png',
-    products: ['Apple (Fuji & Gala)', 'Kiwi', 'Dragon Fruit (Red & White)', 'Beauty Pear', 'Mandarin Orange', 'Red Globe Grapes']
+     id: 'spices-herbs-ground',
+    title: 'Ground Spices & Herbs',
+    description: 'Export-quality Indian ground spices and dried herbs, processed and packed for consistent aroma, colour, purity, and global buyer requirements.',
+    image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp',
+    products: ['Turmeric Powder', 'Red Chilli Powder', 'Coriander Powder', 'Cumin Powder', 'Black Pepper Powder', 'Ginger Powder', 'Garlic Powder', 'Kasuri Methi & Dried Herbs']
   },
   {
     id: 'non-perishable',
