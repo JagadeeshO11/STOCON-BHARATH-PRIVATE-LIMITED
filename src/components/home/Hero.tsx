@@ -10,7 +10,7 @@ const categories = [
   { name: 'Fresh Vegetables', slug: 'fresh-vegetables', image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789838380/b66d7612-89e6-4095-aba2-841d5589b533.png', pos: 'node-spices' },
   { name: 'Fresh Fruits', slug: 'fresh-fruits', image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789837773/d6a404c1-aaa2-4d32-8f63-70b006a346db.png', pos: 'node-grains' },
   { name: 'Non-Perishable', slug: 'non-perishable', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389022/hero-dehydrated-products.jpg', pos: 'node-oil' },
-  { name: 'Imported Fruits', slug: 'imported-fruits', image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789837850/707a1f94-e13f-4bfa-9d61-e11352b91c2a.png', pos: 'node-fruits' },
+  { name: 'Ground Spices & Herbs', slug: 'spices-herbs-ground', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-fruits' },
   { name: 'Spices & Herbs', slug: 'spices-herbs', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-dehydrated' },
   { name: 'Grains & Pulses', slug: 'grains-pulses', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376279/hero-grains.webp', pos: 'node-processed' },
 ]
@@ -56,11 +56,11 @@ export function Hero() {
         <motion.div className="hero-copy" initial={{ opacity: 0, x: 26 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.65, delay: 0.18 }}>
           <div className="hero-leaf-badge">
             <Leaf size={16} className="leaf-badge-icon" />
-            <span>Trusted Indian Exporter of Fresh Fruits & Vegetables for Global Markets</span>
+            <span>Trusted Indian Exporter of Fresh Produce, Ground Spices & Herbs for Global Markets</span>
           </div>
 
           <h1 className="hero-title">
-            <span>STOCON BHARATH is a leading Indian exporter of fresh fruits & vegetables,</span>
+            <span>STOCON BHARATH is a leading Indian exporter of fresh fruits, vegetables, ground spices & herbs,</span>
             <em className="hero-title__accent">
               supplying export-quality agri products to global buyers across the GCC, Europe, UK, USA, Southeast Asia, and Africa.
             </em>
