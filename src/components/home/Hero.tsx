@@ -60,7 +60,7 @@ export function Hero() {
           </div>
 
           <h1 className="hero-title">
-            <span>STOCON BHARATH is a leading Indian exporter of fresh fruits, vegetables, ground spices & herbs,</span>
+            <span><span className="company-name">STOCON BHARATH</span> is a leading Indian exporter of fresh fruits, vegetables, ground spices & herbs,</span>
             <em className="hero-title__accent">
               supplying export-quality agri products to global buyers across the GCC, Europe, UK, USA, Southeast Asia, and Africa.
             </em>
