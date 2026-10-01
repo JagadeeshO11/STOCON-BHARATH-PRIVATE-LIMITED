@@ -24,3 +24,17 @@ button{font-weight:500}
 .site-tagline{font-size:var(--fs-tagline);font-family:var(--body-font)}
 .site-shadow-text{font-size:var(--fs-shadow);font-family:var(--heading-font)}
 
+
+
+/* Company-name styling: always solid, never gradient. */
+.company-name,
+.company-name strong,
+.company-name small{
+  background:none !important;
+  background-image:none !important;
+  -webkit-background-clip:initial !important;
+  background-clip:initial !important;
+  -webkit-text-fill-color:currentColor !important;
+  color:inherit !important;
+  text-shadow:none !important;
+}
