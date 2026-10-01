@@ -10,7 +10,7 @@ export function Header() {
     <header className="header">
       <Link className="brand" to="/" aria-label="Go to STOCON BHARATH home">
         <img className="brand-logo" src={logoUrl} alt="STOCON BHARATH PRIVATE LIMITED logo" />
-        <span className="company-name"><strong>STOCON</strong><small>BHARATH PVT LIMITED</small></span>
+        <span className="company-name">STOCON BHARATH PVT LIMITED</span>
       </Link>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {navigationItems.map(({ label, path }) => (
