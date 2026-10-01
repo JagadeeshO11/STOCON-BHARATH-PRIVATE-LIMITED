@@ -8,7 +8,7 @@ const heroVideo = 'https://res.cloudinary.com/dwmjz9csc/video/upload/v1789390588
 
 const categories = [
   { name: 'Fresh Vegetables', slug: 'fresh-vegetables', image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789838380/b66d7612-89e6-4095-aba2-841d5589b533.png', pos: 'node-spices' },
-  { name: 'Ground Spices & Herbs', slug: 'spices-herbs-ground', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-grains' },
+  { name: 'Fresh Fruits', slug: 'fresh-fruits', image: 'https://res.cloudinary.com/dwmjz9csc/image/upload/v1789837773/d6a404c1-aaa2-4d32-8f63-70b006a346db.png', pos: 'node-grains' },
   { name: 'Non-Perishable', slug: 'non-perishable', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789389022/hero-dehydrated-products.jpg', pos: 'node-oil' },
   { name: 'Ground Spices & Herbs', slug: 'spices-herbs-ground', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-fruits' },
   { name: 'Spices & Herbs', slug: 'spices-herbs', image: 'https://res.cloudinary.com/znbhjevm/image/upload/v1789376285/hero-spices.webp', pos: 'node-dehydrated' },
