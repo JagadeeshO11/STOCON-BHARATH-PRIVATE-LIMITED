@@ -2,7 +2,7 @@ export const companyContent = {
   overview: {
     established: 'August 2025',
     base: 'India',
-    primaryFocus: 'STOCON BHARATH PRIVATE LIMITED is an Indian exporter and supplier of fresh produce, ground spices, herbs, and other export-quality agri products for buyers across the GCC, Europe, UK, USA, Southeast Asia, and Africa.',
+    primaryFocus: 'STOCON BHARATH PRIVATE LIMITED is an Indian exporter and supplier of fresh produce, ground spices, herbs, grains, and other export-quality agri products for buyers across the GCC, Europe, UK, USA, Southeast Asia, and Africa.',
     domesticSales: 'We source directly from verified farms across India, ensuring consistent quality, competitive pricing, and year-round supply.',
     futureDirection: 'End-to-end export operations including sourcing, packaging, cold chain logistics, customs clearance, and global shipping.',
   },
