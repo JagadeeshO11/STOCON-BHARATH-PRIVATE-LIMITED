@@ -5,7 +5,7 @@
   --green:var(--brand-teal);--deep:var(--brand-deep);--leaf:#5E9F93;--mint:var(--brand-mint);--aqua:var(--brand-aqua);--cyan:var(--brand-cyan);--blue:var(--brand-blue);--cream:var(--brand-surface);--sand:var(--brand-surface-aqua);--gold:var(--brand-cyan);--ink:var(--brand-ink);
   --heading-font:'Poppins',sans-serif;
   --body-font:'Poppins',sans-serif;
-  --ui-font:'Roboto',sans-serif;
+  --ui-font:'Poppins',sans-serif;
   --fs-body:15px;
   --fs-h1:40px;
   --fs-h2:30px;
