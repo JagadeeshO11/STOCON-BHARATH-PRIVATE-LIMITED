@@ -27,7 +27,7 @@ export function Brochure(){
         <div>
           <span className="section-label">COMPANY BROCHURE</span>
           <h2>From Indian sourcing to <em>international supply.</em></h2>
-          <p>STOCON BHARATH PRIVATE LIMITED works around practical buyer requirements across fresh produce, food products, spices, grains and imported fruit categories.</p>
+          <p>STOCON BHARATH PRIVATE LIMITED works around practical buyer requirements across fresh produce, food products, ground spices, herbs and grains.</p>
         </div>
         <div className="brochure-intro__actions">
           <a className="brochure-action brochure-action--primary" href="/brochure.pdf" target="_blank" rel="noreferrer"><Download size={17}/> Download PDF</a>
@@ -76,7 +76,7 @@ export function Brochure(){
         <div><span className="section-label">FOCUS AREAS</span><h2>Freshness, sourcing and <em>trade readiness.</em></h2></div>
         <div className="brochure-market__items">
           <div><Globe2/><strong>India to international markets</strong><span>Requirement-led sourcing and export coordination.</span></div>
-          <div><PackageSearch/><strong>Category-led sourcing</strong><span>Fresh and shelf-stable categories across multiple buyer needs.</span></div>
+          <div><PackageSearch/><strong>Category-led sourcing</strong><span>Fresh produce, ground spices, herbs and shelf-stable categories across multiple buyer needs.</span></div>
         </div>
       </section>
     </section>
