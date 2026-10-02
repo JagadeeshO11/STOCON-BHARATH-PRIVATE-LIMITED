@@ -59,7 +59,7 @@ export function Contact() {
           <div className="contact-page__quicklinks">
             <a className="contact-page__contact-card contact-page__contact-card--email" href={'mailto:' + company.email} aria-label={'Email ' + company.email}>
               <span className="contact-page__icon contact-page__icon--email"><Mail size={19} /></span>
-              <span className="contact-page__contact-copy"><small>EMAIL</small><strong>{company.email}</strong></span>
+              <span className="contact-page__contact-copy"><small>EMAIL:</small><strong>{company.email}</strong></span>
               <ArrowRight className="contact-page__arrow" size={17} />
             </a>
             {company.phoneNumbers.map(person => (
