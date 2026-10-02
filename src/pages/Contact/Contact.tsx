@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Send, Plus, X, ClipboardList, Globe2, PackageCheck, Truck } from 'lucide-react'
+import { ArrowRight, Mail, MapPin, Phone, Send, Plus, X, ClipboardList, Globe2, PackageCheck, Truck } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import { useMemo, useState } from 'react'
 import { company } from '../../constants/company'
 import { productCategories } from '../../data/products'
@@ -56,17 +57,20 @@ export function Contact() {
           <p>Select products from our catalogue, share your requirement, and send the complete enquiry directly to WhatsApp.</p>
           <p className="contact-page__intro-note">For a faster quotation discussion, include the destination, approximate quantity, product specifications and preferred packing format.</p>
           <div className="contact-page__quicklinks">
-            <a href={'mailto:' + company.email}>
-              <Mail size={18} />
-              <div><small>EMAIL</small><strong>{company.email}</strong></div>
-              <ArrowRight size={16} />
+            <a className="contact-page__contact-card contact-page__contact-card--email" href={'mailto:' + company.email} aria-label={'Email ' + company.email}>
+              <span className="contact-page__icon contact-page__icon--email"><Mail size={19} /></span>
+              <span className="contact-page__contact-copy"><small>EMAIL</small><strong>{company.email}</strong></span>
+              <ArrowRight className="contact-page__arrow" size={17} />
             </a>
             {company.phoneNumbers.map(person => (
-              <a key={person.number} href={'tel:+91' + person.number}>
-                <Phone size={18} />
-                <div><small>{person.name.toUpperCase()}</small><strong>+91 {person.number}</strong></div>
-                <ArrowRight size={16} />
-              </a>
+              <div key={person.number} className="contact-page__contact-card contact-page__contact-card--person">
+                <span className="contact-page__icon contact-page__icon--phone"><Phone size={18} /></span>
+                <span className="contact-page__contact-copy"><small>{person.name.toUpperCase()}</small><strong>+91 {person.number}</strong></span>
+                <span className="contact-page__contact-actions">
+                  <a href={'tel:+91' + person.number} aria-label={'Call ' + person.name} title={'Call ' + person.name}><Phone size={16} /></a>
+                  <a href={'https://wa.me/91' + person.number} target="_blank" rel="noreferrer" aria-label={'WhatsApp ' + person.name} title={'WhatsApp ' + person.name} className="contact-page__whatsapp-action"><FaWhatsapp size={20} /></a>
+                </span>
+              </div>
             ))}
           </div>
         </div>
@@ -77,7 +81,7 @@ export function Contact() {
               <span className="section-label">SEND AN ENQUIRY</span>
               <h3>Build your <em>product request.</em></h3>
             </div>
-            <MessageCircle size={24} />
+            <span className="contact-enquiry__whatsapp-badge" aria-hidden="true"><FaWhatsapp size={24} /></span>
           </div>
 
           <div className="contact-enquiry__grid">
@@ -139,7 +143,7 @@ export function Contact() {
           </div>
 
           <button type="submit" className="contact-enquiry__submit">
-            <Send size={17} /> Send enquiry on WhatsApp <ArrowRight size={17} />
+            <FaWhatsapp size={19} /> Send enquiry on WhatsApp <ArrowRight size={17} />
           </button>
         </form>
       </section>
