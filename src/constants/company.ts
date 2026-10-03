@@ -5,7 +5,7 @@ export const company = {
   phoneNumbers: [
     { name: 'Kishore', number: '9566055540' },
     { name: 'Vijendra Rao', number: '9908149764' },
-    { name: 'Vidya', number: '919003428882' },
+    { name: 'Vidya', number: '9003428882' },
   ],
   whatsappNumber: '919566055540',
   address: {
